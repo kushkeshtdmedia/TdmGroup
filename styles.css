@@ -889,3 +889,68 @@ body {
         animation-play-state: running;
     }
 }
+.footer {
+  background: #fff;
+  padding: 20px 40px;
+  border-top: 2px solid #f36f21; /* orange border like screenshot */
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  max-width: 60%;
+}
+
+.footer-logo {
+  width: 50px;
+  margin-bottom: 5px;
+}
+
+.company-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f36f21; /* TDM orange */
+  margin: 5px 0;
+}
+
+.company-desc {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.footer-right {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+}
+
+.footer-right a {
+  color: #000;
+  transition: color 0.3s;
+}
+
+.footer-right a:hover {
+  color: #f36f21;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-left {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .footer-right {
+    justify-content: center;
+  }
+}
