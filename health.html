@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Robotics Surgery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+            color: #FF8C00;
+            line-height: 1.6;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: rgba(255,255,255,0.9);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        .btn-primary {
+            background-color: #FF8C00;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e07600;
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FF8C00;
+            font-weight: bold;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            color: #FF8C00;
+            opacity: 0.8;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 140, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 140, 0, 0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            background-color: #f5f5f5;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: #FF8C00;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #FF8C00;
+            font-weight: bold;
+        }
+
+        .card p {
+            color: #FF8C00;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .card .btn-learn-more {
+            background-color: #FF8C00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .card .btn-learn-more:hover {
+            background-color: #e07600;
+        }
+
+        /* Featured Services Section */
+        .featured-services {
+            background-color: white;
+            padding: 80px 20px;
+        }
+
+        .featured-services h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #FF8C00;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .service-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(255,255,255,0.95));
+            padding: 40px 20px 20px;
+            color: #FF8C00;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        /* Dummy images for cards */
+        .card-image-1 { background-image: url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .card-image-2 { background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .card-image-3 { background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .card-image-4 { background-image: url('https://images.unsplash.com/photo-1559757154-5c30478b3088?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .card-image-5 { background-image: url('https://images.unsplash.com/photo-1576671081837-49000212a370?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .card-image-6 { background-image: url('https://images.unsplash.com/photo-1559757154-6dd4ba2dbd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+
+        /* Service card images */
+        .service-1 { background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .service-2 { background-image: url('https://images.unsplash.com/photo-1559757175-5269111a4b84?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .service-3 { background-image: url('https://images.unsplash.com/photo-1576671081837-49000212a370?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .service-4 { background-image: url('https://images.unsplash.com/photo-1559757154-5c30478b3088?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .service-5 { background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+            }
+            
+            .featured-services h2 {
+                font-size: 2.2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Precision Robotics for Minimally Invasive Surgery</h1>
+            <p>Advanced computer-assisted precision imaging, and unguided assistance to empower surgeons and improve patient outcomes.</p>
+            <button class="btn-primary">Explore Platform</button>
+        </div>
+    </section>
+
+    <!-- Core Capabilities Section -->
+    <section class="section">
+        <h2>Core Capabilities</h2>
+        <p class="section-subtitle">Designed to enhance surgical precision, reduce invasiveness, and streamline operating room workflows.</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-image card-image-1"></div>
+                <div class="card-content">
+                    <div class="card-icon">🎯</div>
+                    <h3>Precision Targeting</h3>
+                    <p>Haptic feedback and motion scaling deliver unparalleled dexterity for delicate procedures.</p>
+                    <a href="#" class="btn-learn-more">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image card-image-2"></div>
+                <div class="card-content">
+                    <div class="card-icon">🔍</div>
+                    <h3>Advanced Imaging</h3>
+                    <p>Integrated 3D visualization and fluorescence imaging improve intraoperative decision-making.</p>
+                    <a href="#" class="btn-learn-more">Learn More →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image card-image-3"></div>
+                <div class="card-content">
+                    <div class="card-icon">👁️</div>
+                    <h3>Computer Vision</h3>
+                    <p>Computer vision models provide context-aware prompts and safety boundaries.</p>
+                    <a href="#" class="btn-learn-more">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Services Section -->
+    <section class="featured-services">
+        <h2>Featured Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-image service-1">
+                    <div class="service-overlay">
+                        <div class="service-title">Revolutionizing Oncology Treatment</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image service-2">
+                    <div class="service-overlay">
+                        <div class="service-title">Hepatobiliary and Gastrointestinal</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image service-3">
+                    <div class="service-overlay">
+                        <div class="service-title">Bariatric Surgery – Weight Loss Surgery</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image service-4">
+                    <div class="service-overlay">
+                        <div class="service-title">Surgical Robotic Products</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image service-5">
+                    <div class="service-overlay">
+                        <div class="service-title">Surgeon Command Center</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Highlights Section -->
+    <section class="section">
+        <h2>Innovation Highlights</h2>
+        <p class="section-subtitle">Breakthroughs driving the next generation of surgical robotics.</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-image card-image-4"></div>
+                <div class="card-content">
+                    <div class="card-icon">🔧</div>
+                    <h3>Micro-Instrumentation</h3>
+                    <p>Slimmer, more flexible tools reduce patient trauma and recovery time.</p>
+                    <a href="#" class="btn-learn-more">Learn More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image card-image-5"></div>
+                <div class="card-content">
+                    <div class="card-icon">⚡</div>
+                    <h3>OR Workflow</h3>
+                    <p>Seamless integration with EMR, scheduling, and sterilization management.</p>
+                    <a href="#" class="btn-learn-more">Learn More</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image card-image-6"></div>
+                <div class="card-content">
+                    <div class="card-icon">🌐</div>
+                    <h3>Telesurgery</h3>
+                    <p>Low-latency control enables supervised remote procedures and expert oversight.</p>
+                    <a href="#" class="btn-learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Evidence Section -->
+    <section class="section">
+        <h2>Clinical Evidence</h2>
+        <p class="section-subtitle">Peer-reviewed studies and multi-center trials validating safety and efficacy.</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-image card-image-1"></div>
+                <div class="card-content">
+                    <div class="card-icon">📊</div>
+                    <h3>Clinical Studies</h3>
+                    <p>Reduced complications and shorter hospital stays across 1,200 procedures.</p>
+                    <a href="#" class="btn-learn-more">Read Study</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image card-image-2"></div>
+                <div class="card-content">
+                    <div class="card-icon">🏥</div>
+                    <h3>Hospital Trials</h3>
+                    <p>Collaborations with leading hospitals demonstrate reproducibility and safety.</p>
+                    <a href="#" class="btn-learn-more">Read Trial</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image card-image-3"></div>
+                <div class="card-content">
+                    <div class="card-icon">🎓</div>
+                    <h3>Training Programs</h3>
+                    <p>Comprehensive curriculum with hands-on simulators and metrics-based assessment.</p>
+                    <a href="#" class="btn-learn-more">Explore Program</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
