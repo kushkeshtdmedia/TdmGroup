@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Precision Robotics Surgery</title>
+      <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/footer.css">
     <style>
         * {
             margin: 0;
@@ -254,6 +256,8 @@
     </style>
 </head>
 <body>
+     <div id="header-placeholder"></div>
+
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
@@ -422,5 +426,36 @@
             </div>
         </div>
     </section>
+     <div id="footer-placeholder"></div>
 </body>
+  <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+  <script>
+        // Component Loader
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    // Initialize header functionality after loading
+                    if (typeof initializeHeader === 'function') {
+                        initializeHeader();
+                    }
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load footer
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    // Initialize footer functionality after loading
+                    if (typeof initializeFooter === 'function') {
+                        initializeFooter();
+                    }
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
 </html>
