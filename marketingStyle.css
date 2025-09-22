@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --marquee-width: 100%;
+    --marquee-height: 100px;
+    --marquee-elements-displayed: 6;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
@@ -88,17 +96,109 @@ body {
     margin-bottom: 40px;
 }
 
-/* Logos Container */
+/* Marquee Styles */
+.marquee-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.logo-row {
+    width: 100%;
+}
+
+.marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.marquee::before,
+.marquee::after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee::before {
+    left: 0;
+    background: linear-gradient(to right, #fff 0%, transparent 100%);
+}
+
+.marquee::after {
+    right: 0;
+    background: linear-gradient(to left, #fff 0%, transparent 100%);
+}
+
+.marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+    padding: 0;
+    margin: 0;
+}
+
+.marquee.reverse .marquee-content {
+    animation: scrolling-reverse var(--marquee-animation-duration) linear infinite;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+    }
+}
+
+@keyframes scrolling-reverse {
+    0% {
+        transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    height: 100%;
+    padding: 1rem;
+}
+
+.marquee-content li img {
+    max-height: 70%;
+    max-width: 80%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Legacy styles that are now replaced by marquee - kept for fallback */
 .logos-container {
     position: relative;
-    display: flex;
+    display: none; /* Hidden since we're using marquee */
     align-items: center;
     gap: 16px;
     margin-bottom: 16px;
 }
 
 .logos-grid {
-    display: flex;
+    display: none; /* Hidden since we're using marquee */
     gap: 16px;
     flex: 1;
     overflow: hidden;
@@ -133,7 +233,7 @@ body {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    display: flex;
+    display: none; /* Hidden since we're using marquee */
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -147,9 +247,9 @@ body {
     border-color: #ccc;
 }
 
-/* Dots Indicator */
+/* Dots Indicator - Hidden since using marquee */
 .dots-indicator {
-    display: flex;
+    display: none;
     justify-content: center;
     gap: 6px;
     margin-bottom: 40px;
@@ -266,6 +366,11 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    :root {
+        --marquee-elements-displayed: 3;
+        --marquee-height: 80px;
+    }
+
     .main-title {
         font-size: 28px;
     }
@@ -301,17 +406,6 @@ body {
         font-size: 15px;
     }
     
-    .logos-grid {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-    
-    .logo-item {
-        flex: 0 0 100px;
-        height: 60px;
-    }
-    
     .services-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -326,13 +420,14 @@ body {
         padding: 24px 20px;
     }
     
-    .nav-btn {
-        display: none;
-    }
-    
     .header {
         padding: 15px 0 8px;
         margin-bottom: 30px;
+    }
+
+    .marquee::before,
+    .marquee::after {
+        width: 5rem;
     }
 }
 
@@ -361,11 +456,6 @@ body {
         font-size: 20px;
     }
     
-    .logo-item {
-        flex: 0 0 90px;
-        height: 55px;
-    }
-    
     .service-card,
     .operation-card {
         padding: 20px 16px;
@@ -373,10 +463,6 @@ body {
     
     .hero-image img {
         height: 180px;
-    }
-    
-    .logos-grid {
-        gap: 10px;
     }
     
     .header {

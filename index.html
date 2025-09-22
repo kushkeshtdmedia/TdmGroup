@@ -135,26 +135,89 @@
         </section>
 
         <!-- Founder Section -->
-        <section class="founder-section">
-            <div class="container">
-                <div class="founder-content">
-                    <div class="founder-image">
-                        <img src="asset/TeamWork.png" alt="Founder Image">
+       <!-- Replace ONLY the founder-section in your existing HTML with this -->
+<section class="founder-section">
+    <div class="container">
+        <div class="founder-content">
+            <!-- Keep original founder text on left -->
+            <div class="founder-text">
+                <h2>Mr Narinder Singh Manral</h2>
+                <h4>Chairman of TDM Group</h4>
+                <p>
+                    Mr. Narinder Singh Manral has built a reputation of trust by steady vision, 
+                    brilliant strategies, and a passion for excellence. He has spearheaded 
+                    numerous projects, focusing on developing businesses across multiple 
+                    sectors and scaling them up successfully. His leadership continues to 
+                    inspire growth and innovation within TDM Group.
+                </p>
+            </div>
+
+            <!-- Add carousel on the right side -->
+            <div class="founder-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <img src="path-to-boat-image.jpg" alt="Team Adventure">
+                        <div class="slide-overlay">
+                            <h4>Team Adventures</h4>
+                            <p>Building bonds through exciting team outings and water adventures</p>
+                        </div>
                     </div>
-                    <div class="founder-text">
-                        <h2>Mr Narinder Singh Manral</h2>
-                        <h4>Chairman of TDM Group</h4>
-                        <p>
-                            Mr. Narinder Singh Manral has built a reputation of trust by steady vision, 
-                            brilliant strategies, and a passion for excellence. He has spearheaded 
-                            numerous projects, focusing on developing businesses across multiple 
-                            sectors and scaling them up successfully. His leadership continues to 
-                            inspire growth and innovation within TDM Group.
-                        </p>
+                    
+                    <div class="carousel-slide">
+                        <img src="path-to-hotel-team-image.jpg" alt="Professional Team">
+                        <div class="slide-overlay">
+                            <h4>Professional Excellence</h4>
+                            <p>Our dedicated team delivering outstanding service at The Royal Cruise Hotel</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="path-to-temple-image.jpg" alt="Cultural Experience">
+                        <div class="slide-overlay">
+                            <h4>Cultural Values</h4>
+                            <p>Embracing local culture and traditions through meaningful experiences</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-indicators">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Work-Life Balance Section Below -->
+        <div class="work-life-section">
+            <h3>TD Media Group - Work Life Balance</h3>
+            <div class="balance-grid">
+                <div class="balance-item">
+                    <span class="balance-icon">🌊</span>
+                    <h5>Adventure & Fun</h5>
+                    <p>Team boat trips and outdoor activities</p>
+                </div>
+                <div class="balance-item">
+                    <span class="balance-icon">🏨</span>
+                    <h5>Professional Growth</h5>
+                    <p>Career development in hospitality</p>
+                </div>
+                <div class="balance-item">
+                    <span class="balance-icon">🙏</span>
+                    <h5>Cultural Unity</h5>
+                    <p>Celebrating diversity together</p>
+                </div>
+                <div class="balance-item">
+                    <span class="balance-icon">⚖️</span>
+                    <h5>Work-Life Balance</h5>
+                    <p>Flexible schedules and wellness</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
     </main>
 
     <!-- Include Global Footer -->
@@ -184,5 +247,39 @@
                 .catch(error => console.error('Error loading footer:', error));
         });
     </script>
+    <script>
+// Auto-carousel functionality
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Add active class to current slide and dot
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    showSlide(currentSlideIndex);
+}
+
+function currentSlide(index) {
+    currentSlideIndex = index - 1;
+    showSlide(currentSlideIndex);
+}
+
+// Auto-slide every 3 seconds
+setInterval(nextSlide, 3000);
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    showSlide(0);
+});
+</script>
 </body>
 </html>
