@@ -563,10 +563,10 @@ body {
         gap: 20px;
     }
     
-    .founder-content {
+    /* .founder-content {
         flex-direction: column;
         text-align: center;
-    }
+    } */
     
     .founder-image img {
         width: 150px;
@@ -643,226 +643,621 @@ body {
         transform: none;
     }
 }
+ /* Improved Carousel Styles */
+        /* .founder-carousel-section {
+            padding: clamp(40px, 8vw, 60px) 0;
+            background: #f8f8f8;
+            position: relative;
+            overflow: hidden;
+        } */
+
+        /* .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        } */
+
+        /* .carousel-container {
+            display: flex;
+            width: 500%; /* 5 slides for infinite loop (3 original + 2 clones) */
+            /* transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: transform; */
+        /* } */
+
+        /* .carousel-slide {
+            flex: 0 0 20%; /* Each slide takes 1/5 of container */
+            /* width: 20%; */
+        /* } */ */ */
+
+        /* Founder Section Styles */
+        /* .founder-section {
+            background: linear-gradient(135deg, #ff6600, #ff9900);
+            color: white;
+            text-align: center;
+            margin: 0 10px;
+            border-radius: 20px;
+            padding: clamp(30px, 5vw, 40px) 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        } */
+
+        /* .founder-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .founder-section:hover::before {
+            left: 100%;
+        } */
+
+        /* .founder-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: clamp(20px, 4vw, 40px);
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .founder-image {
+            position: relative;
+        } */
+
+        /* .founder-image img {
+            width: clamp(120px, 15vw, 180px);
+            height: clamp(120px, 15vw, 180px);
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        } */
+
+        /* .founder-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        } */
+
+        /* .founder-text {
+            flex: 1;
+            max-width: 500px;
+            min-width: 280px;
+            text-align: left;
+        }
+
+        .founder-text h2 {
+            font-size: clamp(18px, 3vw, 26px);
+            margin-bottom: 8px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .founder-text h4 {
+            font-size: clamp(12px, 2vw, 16px);
+            margin-bottom: 15px;
+            font-style: italic;
+            opacity: 0.9;
+            color: #ffe4b3;
+        }
+
+        .founder-text p {
+            font-size: clamp(13px, 1.8vw, 15px);
+            line-height: 1.6;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        } */
+
+
+
+        /* Slide Counter
+        .slide-counter {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10;
+        }
+
+        .slide-counter .current {
+            color: #ff6600;
+        } */
 
 
 
 
-/* Add these styles to your existing index-main.css */
 
-/* Updated Founder Section */
-.founder-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    gap: clamp(30px, 5vw, 50px);
-    flex-wrap: wrap;
-    justify-content: space-between;
+        /* Hide any scrollbars */
+        .carousel-wrapper,
+        .carousel-container,
+        .founder-carousel-section,
+        body,
+        html {
+            overflow-x: hidden;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .carousel-wrapper::-webkit-scrollbar,
+        .carousel-container::-webkit-scrollbar,
+        .founder-carousel-section::-webkit-scrollbar,
+        body::-webkit-scrollbar,
+        html::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            background: transparent;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .founder-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
+
+            .founder-text {
+                text-align: center;
+                max-width: 100%;
+            }
+
+            /* .founder-section {
+                margin: 0 5px;
+                padding: 25px 0;
+            } */
+
+            .carousel-dots {
+                margin-top: 20px;
+                padding: 15px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .founder-content {
+                gap: 20px;
+                padding: 0 15px;
+            }
+
+            .founder-image img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .carousel-dot {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        /* Animation for slide entrance */
+        /* .carousel-slide {
+            opacity: 0.7;
+            transform: scale(0.95);
+            transition: all 0.5s ease;
+        } */
+
+        /* .carousel-slide.active {
+            opacity: 1;
+            transform: scale(1);
+        } */
+
+        /* Touch indicators for mobile */
+        .touch-indicator {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .touch-indicator:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .touch-indicator.prev {
+            left: 20px;
+        }
+
+        .touch-indicator.next {
+            right: 20px;
+        }
+
+        .touch-indicator::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+        }
+
+        .touch-indicator.prev::after {
+            transform: rotate(135deg);
+            margin-left: 3px;
+        }
+
+        .touch-indicator.next::after {
+            transform: rotate(-45deg);
+            margin-right: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .touch-indicator {
+                display: none;
+            }
+        }
+        
+
+
+
+        .spectrum-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(20px, 5vw, 40px);
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
 }
 
-.founder-text {
-    flex: 1;
-    min-width: 300px;
-    max-width: 450px;
+/* New bottom grid for hospital and hospitality cards */
+.spectrum-grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(20px, 5vw, 40px);
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.founder-text h2 {
-    font-size: clamp(20px, 4vw, 28px);
-    margin-bottom: 10px;
-    font-weight: bold;
+/* Special styling for new business tags */
+.business-tag.healthcare {
+    background: linear-gradient(135deg, #28a745, #20c997);
 }
 
-.founder-text h4 {
-    font-size: clamp(14px, 2.5vw, 18px);
-    margin-bottom: 15px;
-    font-style: italic;
-    opacity: 0.9;
+.business-tag.hospitality {
+    background: linear-gradient(135deg, #6f42c1, #e83e8c);
 }
 
-.founder-text p {
-    font-size: clamp(14px, 2vw, 16px);
-    line-height: 1.6;
+/* Update responsive design - Replace existing media queries */
+@media (max-width: 1024px) {
+    .spectrum-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    
+    .spectrum-grid-bottom {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
 }
 
-/* Carousel Styles */
-.founder-carousel {
-    flex: 1;
-    min-width: 300px;
-    max-width: 450px;
+@media (max-width: 768px) {
+    .spectrum-grid,
+    .spectrum-grid-bottom {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .spectrum-grid,
+    .spectrum-grid-bottom {
+        gap: 20px;
+    }
+}
+
+/* ===== FULL SCREEN FOUNDER CAROUSEL SECTION ===== */
+
+/* Main Carousel Container - Full Screen */
+.founder-carousel-section {
+    padding: 0;
+    background: #f8f8f8;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    margin: 0;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .carousel-container {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    display: flex;
+    width: 500%;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    margin: 0;
+    padding: 0;
 }
 
 .carousel-slide {
+    flex: 0 0 20%;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Founder Section - Full Width */
+.founder-section {
+    background: linear-gradient(135deg, #ff6600, #ff9900);
+    color: white;
+    text-align: center;
+    margin: 0;
+    border-radius: 0;
+    padding: clamp(40px, 8vw, 60px) 0;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.founder-section::before {
+    content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.founder-section:hover::before {
+    left: 100%;
+}
+
+/* Founder Content Layout */
+.founder-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: clamp(30px, 5vw, 50px);
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 clamp(20px, 4vw, 40px);
+}
+
+/* Founder Image Styling */
+.founder-image {
+    position: relative;
+}
+
+.founder-image img {
+    width: clamp(150px, 18vw, 220px);
+    height: clamp(150px, 18vw, 220px);
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.founder-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Founder Text Content */
+.founder-text {
+    flex: 1;
+    max-width: 600px;
+    min-width: 300px;
+    text-align: left;
+}
+
+.founder-text h2 {
+    font-size: clamp(22px, 4vw, 32px);
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.founder-text h4 {
+    font-size: clamp(14px, 2.5vw, 20px);
+    margin-bottom: 18px;
+    font-style: italic;
+    opacity: 0.9;
+    color: #ffe4b3;
+}
+
+.founder-text p {
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.6;
+    opacity: 0.95;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Slide Counter */
+.slide-counter {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+.slide-counter .current {
+    color: #ff6600;
+}
+
+/* Touch Navigation Indicators */
+.touch-indicator {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.touch-indicator:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.touch-indicator.prev {
+    left: 25px;
+}
+
+.touch-indicator.next {
+    right: 25px;
+}
+
+.touch-indicator::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+}
+
+.touch-indicator.prev::after {
+    transform: rotate(135deg);
+    margin-left: 3px;
+}
+
+.touch-indicator.next::after {
+    transform: rotate(-45deg);
+    margin-right: 3px;
+}
+
+/* Slide Animations */
+.carousel-slide {
+    opacity: 0.7;
+    transform: scale(0.95);
+    transition: all 0.5s ease;
 }
 
 .carousel-slide.active {
     opacity: 1;
+    transform: scale(1);
 }
 
-.carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/* ===== RESPONSIVE DESIGN ===== */
 
-.slide-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
-    color: white;
-    padding: 20px;
-    text-align: left;
-}
-
-.slide-overlay h4 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.slide-overlay p {
-    font-size: 0.9rem;
-    opacity: 0.9;
-    line-height: 1.4;
-}
-
-.carousel-indicators {
-    position: absolute;
-    bottom: 15px;
-    right: 20px;
-    display: flex;
-    gap: 8px;
-    z-index: 10;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.dot.active {
-    background: white;
-    transform: scale(1.2);
-}
-
-.dot:hover {
-    background: rgba(255,255,255,0.8);
-}
-
-/* Work Life Balance Section */
-.work-life-section {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.work-life-section h3 {
-    font-size: clamp(18px, 3vw, 24px);
-    margin-bottom: 25px;
-    font-weight: 600;
-}
-
-.balance-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.balance-item {
-    background: rgba(255,255,255,0.1);
-    padding: 20px 15px;
-    border-radius: 12px;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: transform 0.3s ease;
-}
-
-.balance-item:hover {
-    transform: translateY(-5px);
-    background: rgba(255,255,255,0.15);
-}
-
-.balance-icon {
-    font-size: 2rem;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.balance-item h5 {
-    font-size: 1rem;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.balance-item p {
-    font-size: 0.85rem;
-    opacity: 0.9;
-    line-height: 1.4;
-}
-
-/* Mobile Responsive */
+/* Tablet and Small Desktop */
 @media (max-width: 768px) {
     .founder-content {
         flex-direction: column;
         text-align: center;
         gap: 30px;
+        padding: 0 20px;
     }
-    
-    .carousel-container {
-        height: 250px;
-    }
-    
-    .slide-overlay {
-        padding: 15px;
+
+    .founder-text {
         text-align: center;
+        max-width: 100%;
     }
-    
-    .slide-overlay h4 {
-        font-size: 1.1rem;
+
+    .founder-section {
+        padding: 40px 0;
     }
-    
-    .slide-overlay p {
-        font-size: 0.85rem;
-    }
-    
-    .balance-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+
+    .touch-indicator {
+        display: none;
     }
 }
 
+/* Mobile Phones */
 @media (max-width: 480px) {
-    .carousel-container {
-        height: 220px;
+    .founder-content {
+        gap: 25px;
+        padding: 0 15px;
     }
-    
-    .balance-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+
+    .founder-image img {
+        width: 120px;
+        height: 120px;
     }
-    
-    .balance-item {
-        padding: 15px 10px;
+
+    .slide-counter {
+        top: 15px;
+        right: 15px;
+        padding: 8px 15px;
+        font-size: 13px;
     }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Ensure no body/container interference */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main-content {
+    padding: 0;
+}
+
+/* Hide scrollbars */
+.carousel-wrapper,
+.carousel-container,
+.founder-carousel-section,
+body,
+html {
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carousel-wrapper::-webkit-scrollbar,
+.carousel-container::-webkit-scrollbar,
+.founder-carousel-section::-webkit-scrollbar,
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    background: transparent;
 }

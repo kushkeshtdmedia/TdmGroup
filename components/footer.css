@@ -306,3 +306,50 @@
         font-size: 11px;
     }
 }
+.social-icons .social-icon span {
+    filter: sepia(100%) saturate(300%) hue-rotate(30deg);
+    /* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.social-icon {
+    /* Remove all circular properties */
+    width: auto;
+    height: auto;
+    border: none; /* This removes the border */
+    border-radius: 0;
+    
+    /* Center the emoji */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Style the link container */
+    color: #FF8C00; /* This won't work on emojis, but is good practice for text */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Simple hover effect without color change */
+}
+
+/* Style the emoji inside the span */
+.social-icon span {
+    /* Set font size for the emoji */
+    font-size: 24px; /* Adjust size as needed */
+    
+    /* Use a filter to color the emoji to saffron */
+    filter: 
+        invert(57%) 
+        sepia(97%) 
+        saturate(558%) 
+        hue-rotate(345deg) 
+        brightness(104%) 
+        contrast(101%);
+}
+}

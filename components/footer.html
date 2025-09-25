@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Footer</title>
     <link rel="stylesheet" href="footer.css">
+    <style>
+      .social-icons {
+  display: flex;
+  gap: 12px;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) saturate(100%) invert(48%) sepia(95%) saturate(3423%) hue-rotate(347deg) brightness(98%) contrast(101%);
+  transition: transform 0.3s ease;
+}
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+</style>
 </head>
 <body>
-    <!-- Global Footer -->
     <footer class="global-footer">
         <div class="footer-container">
             <div class="footer-section brand-section">
@@ -20,34 +34,31 @@
                         Building a legacy of innovation and growth across diverse markets and industries. 
                         Where ideas become enterprise through strategic vision and passionate execution.
                     </p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon" title="Facebook" aria-label="Facebook">
-                            <span>f</span>
-                        </a>
-                        <a href="#" class="social-icon" title="Twitter" aria-label="Twitter">
-                            <span>t</span>
-                        </a>
-                        <a href="#" class="social-icon" title="WhatsApp" aria-label="WhatsApp">
-                            <span>w</span>
-                        </a>
-                        <a href="#" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
-                            <span>in</span>
-                        </a>
-                    </div>
+                  <div class="social-icons">
+  <a href="https://facebook.com" class="social-icon" target="_blank" aria-label="Facebook">
+    <img src="asset/facebook.svg" alt="Facebook">
+  </a>
+  <a href="https://twitter.com" class="social-icon" target="_blank" aria-label="Twitter">
+    <img src="asset/x.svg" alt="Twitter">
+  </a>
+  <a href="https://linkedin.com" class="social-icon" target="_blank" aria-label="LinkedIn">
+    <img src="asset/linkedin.svg" alt="LinkedIn">
+  </a>
+</div>
                 </div>
             </div>
 
             <div class="footer-section office-section">
                 <h3>Office</h3>
                 <div class="office-details">
-                    <p>ITPL Road</p>
-                    <p>Whitefield, Bangalore</p>
-                    <p>Karnataka, PIN 560066</p>
-                    <p>India</p>
+                    <p>TD Media Network</p>
+                    <p>E-87, 1st and 2nd Floor</p>
+                    <p>Sector-06, Noida</p>
+                    <p> Uttar Pradesh 201301 (U.P),India</p>
                 </div>
                 <div class="contact-info">
-                    <p><a href="mailto:avinashdm@outlook.com">avinashdm@outlook.com</a></p>
-                    <p><a href="tel:+910123456789">+91 - 0123456789</a></p>
+                    <p><a href="mailto:sales@tdmedianetwork.com">sales@tdmedianetwork.com</a></p>
+                    <p><a href="tel:91 120 4555242">91 120 4555242</a></p>
                 </div>
             </div>
 
@@ -59,8 +70,6 @@
                     <a href="health.html">Health</a>
                     <a href="hospitality.html">Hospitality</a>
                     <a href="community.html">Community</a>
-                    <a href="#about">About Us</a>
-                    <a href="#contact">Contact</a>
                 </div>
             </div>
         </div>
