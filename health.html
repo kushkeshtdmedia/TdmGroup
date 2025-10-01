@@ -20,7 +20,7 @@
             line-height: 1.6;
         }
 
-        .hero-section {
+        /* .hero-section {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
@@ -30,12 +30,48 @@
             justify-content: center;
             text-align: center;
             position: relative;
-        }
+        } */
+        .hero-section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
 
-        .hero-content {
-            max-width: 800px;
-            padding: 0 20px;
-        }
+
+.hero-banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+
+
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+      .hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 3;
+}
 
         .hero-content h1 {
             font-size: 3.5rem;
@@ -222,9 +258,9 @@
         }
 
         /* Dummy images for cards */
-        .card-image-1 { background-image: url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
-        .card-image-2 { background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
-        .card-image-3 { background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .card-image-1 { background-image: url('asset/PrecisionImage.jpg'); }
+        .card-image-2 { background-image: url('asset/PhotoAdvance.jpg'); }
+        .card-image-3 { background-image: url('asset/ComputerVision.jpg'); }
         .card-image-4 { background-image: url('https://images.unsplash.com/photo-1559757154-5c30478b3088?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
         .card-image-5 { background-image: url('https://images.unsplash.com/photo-1576671081837-49000212a370?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
         .card-image-6 { background-image: url('https://images.unsplash.com/photo-1559757154-6dd4ba2dbd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
@@ -259,13 +295,15 @@
      <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>Precision Robotics for Minimally Invasive Surgery</h1>
-            <p>Advanced computer-assisted precision imaging, and unguided assistance to empower surgeons and improve patient outcomes.</p>
-            <button class="btn-primary">Explore Platform</button>
-        </div>
-    </section>
+ <section class="hero-section">
+    <img src="asset/healthBanner.jpg" alt="Surgical Robotics" class="hero-banner-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 style="color:#FF8C00">Precision Robotics for Minimally Invasive Surgery</h1>
+        <p style="color:#FF8C00">Advanced computer-assisted precision imaging, and unguided assistance to empower surgeons and improve patient outcomes.</p>
+        <button class="btn-primary">Explore Platform</button>
+    </div>
+</section>
 
     <!-- Core Capabilities Section -->
     <section class="section">

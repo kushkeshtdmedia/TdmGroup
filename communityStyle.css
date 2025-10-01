@@ -16,8 +16,7 @@ body {
 .banner-section {
     position: relative;
     min-height: 80vh;
-    background: linear-gradient(135deg, rgba(244, 162, 97, 0.9), rgba(231, 111, 81, 0.9)), 
-                url('https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=1920&h=1080&fit=crop') center/cover;
+    background: url('asset/ReadableHero.jpeg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,9 +34,6 @@ body {
 
 .banner-content {
     text-align: center;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 80px 60px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -60,11 +56,10 @@ body {
 .banner-title {
     font-size: 72px;
     font-weight: 800;
-    color: white;
     margin-bottom: 30px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     line-height: 1.1;
-    background: linear-gradient(45deg, #ffffff, #f0f0f0);
+    background: linear-gradient(45deg, #FF8C00,#FF8C00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
