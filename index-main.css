@@ -473,53 +473,13 @@ body {
 }
 
 /* Founder Section */
-.founder-section {
-    background: linear-gradient(to right, #ff6600, #ff9900);
-    padding: clamp(40px, 8vw, 60px) clamp(20px, 4vw, 20px);
-    color: white;
-    text-align: center;
-}
 
-.founder-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: clamp(20px, 4vw, 30px);
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.founder-image img {
-    width: clamp(150px, 20vw, 200px);
-    height: clamp(150px, 20vw, 200px);
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-}
 
-.founder-text {
-    max-width: 600px;
-    flex: 1;
-    min-width: 0;
-}
 
-.founder-text h2 {
-    font-size: clamp(20px, 4vw, 28px);
-    margin-bottom: 10px;
-    font-weight: bold;
-}
 
-.founder-text h4 {
-    font-size: clamp(14px, 2.5vw, 18px);
-    margin-bottom: 15px;
-    font-style: italic;
-}
 
-.founder-text p {
-    font-size: clamp(14px, 2vw, 16px);
-    line-height: 1.6;
-}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -561,15 +521,7 @@ body {
         gap: 20px;
     }
     
-    /* .founder-content {
-        flex-direction: column;
-        text-align: center;
-    } */
-    
-    .founder-image img {
-        width: 150px;
-        height: 150px;
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -602,17 +554,7 @@ body {
         padding: 30px 20px;
     }
     
-    .founder-text h2 {
-        font-size: 22px;
-    }
-    
-    .founder-text h4 {
-        font-size: 16px;
-    }
-    
-    .founder-text p {
-        font-size: 14px;
-    }
+   
     
     .container {
         padding: 0 15px;
@@ -641,140 +583,16 @@ body {
         transform: none;
     }
 }
- /* Improved Carousel Styles */
-        /* .founder-carousel-section {
-            padding: clamp(40px, 8vw, 60px) 0;
-            background: #f8f8f8;
-            position: relative;
-            overflow: hidden;
-        } */
+ 
 
-        /* .carousel-wrapper {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        } */
+        
 
-        /* .carousel-container {
-            display: flex;
-            width: 500%; /* 5 slides for infinite loop (3 original + 2 clones) */
-            /* transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            will-change: transform; */
-        /* } */
-
-        /* .carousel-slide {
-            flex: 0 0 20%; /* Each slide takes 1/5 of container */
-            /* width: 20%; */
-        /* } */ */ */
-
-        /* Founder Section Styles */
-        /* .founder-section {
-            background: linear-gradient(135deg, #ff6600, #ff9900);
-            color: white;
-            text-align: center;
-            margin: 0 10px;
-            border-radius: 20px;
-            padding: clamp(30px, 5vw, 40px) 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        } */
-
-        /* .founder-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .founder-section:hover::before {
-            left: 100%;
-        } */
-
-        /* .founder-content {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: clamp(20px, 4vw, 40px);
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 0 20px;
-        }
-
-        .founder-image {
-            position: relative;
-        } */
-
-        /* .founder-image img {
-            width: clamp(120px, 15vw, 180px);
-            height: clamp(120px, 15vw, 180px);
-            border-radius: 50%;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            object-fit: cover;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        } */
-
-        /* .founder-image img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
-        } */
-
-        /* .founder-text {
-            flex: 1;
-            max-width: 500px;
-            min-width: 280px;
-            text-align: left;
-        }
-
-        .founder-text h2 {
-            font-size: clamp(18px, 3vw, 26px);
-            margin-bottom: 8px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .founder-text h4 {
-            font-size: clamp(12px, 2vw, 16px);
-            margin-bottom: 15px;
-            font-style: italic;
-            opacity: 0.9;
-            color: #ffe4b3;
-        }
-
-        .founder-text p {
-            font-size: clamp(13px, 1.8vw, 15px);
-            line-height: 1.6;
-            opacity: 0.95;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        } */
+     
 
 
 
-        /* Slide Counter
-        .slide-counter {
-            position: absolute;
-            top: 20px;
-            right: 25px;
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 10;
-        }
 
-        .slide-counter .current {
-            color: #ff6600;
-        } */
+   
 
 
 
@@ -783,7 +601,7 @@ body {
         /* Hide any scrollbars */
         .carousel-wrapper,
         .carousel-container,
-        .founder-carousel-section,
+        /* .founder-carousel-section, */
         body,
         html {
             overflow-x: hidden;
@@ -793,7 +611,7 @@ body {
 
         .carousel-wrapper::-webkit-scrollbar,
         .carousel-container::-webkit-scrollbar,
-        .founder-carousel-section::-webkit-scrollbar,
+        /* .founder-carousel-section::-webkit-scrollbar, */
         body::-webkit-scrollbar,
         html::-webkit-scrollbar {
             display: none;
@@ -803,22 +621,7 @@ body {
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            .founder-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 25px;
-            }
-
-            .founder-text {
-                text-align: center;
-                max-width: 100%;
-            }
-
-            /* .founder-section {
-                margin: 0 5px;
-                padding: 25px 0;
-            } */
-
+          
             .carousel-dots {
                 margin-top: 20px;
                 padding: 15px 0;
@@ -826,15 +629,7 @@ body {
         }
 
         @media (max-width: 480px) {
-            .founder-content {
-                gap: 20px;
-                padding: 0 15px;
-            }
-
-            .founder-image img {
-                width: 100px;
-                height: 100px;
-            }
+       
 
             .carousel-dot {
                 width: 10px;
@@ -975,14 +770,7 @@ body {
 /* ===== FULL SCREEN FOUNDER CAROUSEL SECTION ===== */
 
 /* Main Carousel Container - Full Screen */
-.founder-carousel-section {
-    padding: 0;
-    background: #f8f8f8;
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
-    margin: 0;
-}
+
 
 .carousel-wrapper {
     position: relative;
@@ -1009,95 +797,16 @@ body {
 }
 
 /* Founder Section - Full Width */
-.founder-section {
-    background: linear-gradient(135deg, #ff6600, #ff9900);
-    color: white;
-    text-align: center;
-    margin: 0;
-    border-radius: 0;
-    padding: clamp(40px, 8vw, 60px) 0;
-    box-shadow: none;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
 
-.founder-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-    transition: left 0.6s ease;
-}
 
-.founder-section:hover::before {
-    left: 100%;
-}
 
-/* Founder Content Layout */
-.founder-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: clamp(30px, 5vw, 50px);
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 clamp(20px, 4vw, 40px);
-}
+
+
 
 /* Founder Image Styling */
-.founder-image {
-    position: relative;
-}
 
-.founder-image img {
-    width: clamp(150px, 18vw, 220px);
-    height: clamp(150px, 18vw, 220px);
-    border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
 
-.founder-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
-}
 
-/* Founder Text Content */
-.founder-text {
-    flex: 1;
-    max-width: 600px;
-    min-width: 300px;
-    text-align: left;
-}
-
-.founder-text h2 {
-    font-size: clamp(22px, 4vw, 32px);
-    margin-bottom: 10px;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.founder-text h4 {
-    font-size: clamp(14px, 2.5vw, 20px);
-    margin-bottom: 18px;
-    font-style: italic;
-    opacity: 0.9;
-    color: #ffe4b3;
-}
-
-.founder-text p {
-    font-size: clamp(15px, 2vw, 18px);
-    line-height: 1.6;
-    opacity: 0.95;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
 
 /* Slide Counter */
 .slide-counter {
@@ -1185,21 +894,7 @@ body {
 
 /* Tablet and Small Desktop */
 @media (max-width: 768px) {
-    .founder-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-        padding: 0 20px;
-    }
-
-    .founder-text {
-        text-align: center;
-        max-width: 100%;
-    }
-
-    .founder-section {
-        padding: 40px 0;
-    }
+ 
 
     .touch-indicator {
         display: none;
@@ -1208,15 +903,6 @@ body {
 
 /* Mobile Phones */
 @media (max-width: 480px) {
-    .founder-content {
-        gap: 25px;
-        padding: 0 15px;
-    }
-
-    .founder-image img {
-        width: 120px;
-        height: 120px;
-    }
 
     .slide-counter {
         top: 15px;
@@ -1242,7 +928,7 @@ body {
 /* Hide scrollbars */
 .carousel-wrapper,
 .carousel-container,
-.founder-carousel-section,
+/* .founder-carousel-section, */
 body,
 html {
     overflow-x: hidden;
@@ -1252,7 +938,7 @@ html {
 
 .carousel-wrapper::-webkit-scrollbar,
 .carousel-container::-webkit-scrollbar,
-.founder-carousel-section::-webkit-scrollbar,
+/* .founder-carousel-section::-webkit-scrollbar, */
 body::-webkit-scrollbar,
 html::-webkit-scrollbar {
     display: none;
