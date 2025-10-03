@@ -1509,19 +1509,37 @@ body {
 }
 
 @media (max-width: 768px) {
-    .banner-section {
+   .banner-section {
         height: auto;
         min-height: 400px;
         margin: 0 10px;
+        background-image: url('asset/Banner.jpg'); /* Changed for mobile */
     }
     
-    .banner-content {
+     .banner-content {
         flex-direction: column;
         padding: 40px 30px;
         text-align: center;
     }
-    
-    .spectrum-grid,
+    .profile-container {
+        width: 300px;  /* Increased from 250px */
+        height: 300px; /* Increased from 250px */
+        margin-top: 30px;
+    }
+    .profile-image {
+    position: absolute;
+    top: 53%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    width: clamp(220px, 28vw, 380px);
+    height: clamp(220px, 28vw, 406px);
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 5;
+    filter: contrast(1.1) brightness(1.05);
+}
+
+     .spectrum-grid,
     .spectrum-grid-bottom {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1532,16 +1550,15 @@ body {
         gap: 20px;
     }
 
-    .family-banner-wrapper {
+       .family-banner-wrapper {
         height: clamp(400px, 60vh, 500px);
     }
-
-    .banner-nav {
+      .banner-nav {
         width: 40px;
         height: 40px;
     }
 
-    .banner-nav.prev {
+  .banner-nav.prev {
         left: 15px;
     }
 
