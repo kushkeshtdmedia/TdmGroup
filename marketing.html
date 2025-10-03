@@ -239,32 +239,61 @@
 </body>
 <script src="components/header.js"></script>
 <script src="components/footer.js"></script>
-<script>
-    // Component Loader
-    document.addEventListener('DOMContentLoaded', function () {
-        // Load header
-        fetch('components/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-                // Initialize header functionality after loading
-                if (typeof initializeHeader === 'function') {
-                    initializeHeader();
-                }
-            })
-            .catch(error => console.error('Error loading header:', error));
+   <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Loading components...');
+            
+            // Load header
+            fetch('components/header.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Header not found: ' + response.status);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log('Header HTML loaded');
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    
+                    // Initialize header after a small delay
+                    setTimeout(function() {
+                        if (typeof window.initializeHeader === 'function') {
+                            window.initializeHeader();
+                        } else {
+                            console.error('initializeHeader function not found!');
+                        }
+                    }, 100);
+                })
+                .catch(error => {
+                    console.error('Error loading header:', error);
+                });
 
-        // Load footer
-        fetch('components/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-                // Initialize footer functionality after loading
-                if (typeof initializeFooter === 'function') {
-                    initializeFooter();
-                }
-            })
-            .catch(error => console.error('Error loading footer:', error));
+            // Load footer
+            fetch('components/footer.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Footer not found: ' + response.status);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log('Footer HTML loaded');
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    
+                    // Initialize footer if needed
+                    setTimeout(function() {
+                        if (typeof window.initializeFooter === 'function') {
+                            window.initializeFooter();
+                        }
+                    }, 100);
+                })
+                .catch(error => {
+                    console.error('Error loading footer:', error);
+                });
+        });
+    </script>
+<script>
+   
 
         // Pause marquee on hover
         const marqueeContainers = document.querySelectorAll('.marquee-container');
@@ -279,7 +308,7 @@
                 content.style.animationPlayState = 'running';
             });
         });
-    });
+    
 </script>
 
 </html>

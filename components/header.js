@@ -1,5 +1,7 @@
-// Global Header JavaScript
-document.addEventListener('DOMContentLoaded', function() {
+// Global Header JavaScript - Universal for all pages
+function initializeHeader() {
+    console.log('Initializing header...');
+    
     // Get elements
     const navigation = document.querySelector('.navigation');
     const navMenu = document.querySelector('.nav-menu');
@@ -7,6 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const hamburger = document.querySelector('.hamburger');
     const navOverlay = document.querySelector('.nav-overlay');
+
+    // Check if elements exist before proceeding
+    if (!hamburger || !navMenu || !navOverlay) {
+        console.error('Header elements not found. Make sure header HTML is loaded.');
+        return;
+    }
+
+    console.log('Header elements found, setting up hamburger menu...');
 
     // Toggle mobile menu
     function toggleMenu() {
@@ -18,8 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Prevent scrolling when menu is open
         if (navMenu.classList.contains('active')) {
             body.style.overflow = 'hidden';
+            console.log('Menu opened');
         } else {
             body.style.overflow = '';
+            console.log('Menu closed');
         }
     }
 
@@ -32,28 +44,33 @@ document.addEventListener('DOMContentLoaded', function() {
         body.style.overflow = '';
     }
 
-    // Event listeners
-    if (hamburger) {
-        hamburger.addEventListener('click', function(e) {
-            e.preventDefault();
-            toggleMenu();
-        });
-    }
+    // Hamburger click event
+    hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleMenu();
+    });
 
     // Close menu when overlay is clicked
-    if (navOverlay) {
-        navOverlay.addEventListener('click', closeMenu);
-    }
+    navOverlay.addEventListener('click', function() {
+        closeMenu();
+    });
 
     // Close menu when nav link is clicked
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Add small delay for smooth transition
-            setTimeout(closeMenu, 100);
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // If it's not an anchor link on the same page, close menu immediately
+            if (!href.includes('#') || href.includes('.html#')) {
+                closeMenu();
+            } else {
+                // For anchor links on same page, close after navigation
+                setTimeout(closeMenu, 100);
+            }
         });
     });
 
-    // Close menu on window resize (tablet to desktop)
+    // Close menu on window resize (mobile to desktop)
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) {
             closeMenu();
@@ -144,21 +161,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Touch swipe to close menu
     let touchStartX = 0;
 
-    if (navMenu) {
-        navMenu.addEventListener('touchstart', function(e) {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
+    navMenu.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
 
-        navMenu.addEventListener('touchend', function(e) {
-            const touchEndX = e.changedTouches[0].screenX;
-            const swipeDistance = touchStartX - touchEndX;
-            
-            // If swiped right to left by more than 100px, close menu
-            if (swipeDistance > 100) {
-                closeMenu();
-            }
-        }, { passive: true });
-    }
+    navMenu.addEventListener('touchend', function(e) {
+        const touchEndX = e.changedTouches[0].screenX;
+        const swipeDistance = touchStartX - touchEndX;
+        
+        // If swiped right to left by more than 100px, close menu
+        if (swipeDistance > 100) {
+            closeMenu();
+        }
+    }, { passive: true });
 
     // Performance optimization - Debounced resize handler
     function debounce(func, wait) {
@@ -181,4 +196,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 250);
 
     window.addEventListener('resize', debouncedResize);
-});
+
+    console.log('Header initialized successfully! Hamburger menu is ready.');
+}
+
+// Make function globally available
+window.initializeHeader = initializeHeader;

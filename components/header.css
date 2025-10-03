@@ -15,7 +15,6 @@ body {
 .global-header {
     position: relative;
     background-color: white;
-   
     width: 100%;
 }
 
@@ -35,6 +34,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .rotating-logo {
@@ -72,7 +72,7 @@ body {
     position: relative; 
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu - Hidden by default (Desktop) */
 .hamburger {
     display: none;
     position: absolute;
@@ -85,17 +85,19 @@ body {
     width: 30px;
     height: 30px;
     justify-content: space-around;
+    padding: 5px 0;
 }
 
 .hamburger span {
     display: block;
-    width: 25px;
+    width: 100%;
     height: 3px;
     background: #333;
     transition: all 0.3s ease;
     border-radius: 3px;
 }
 
+/* Hamburger Animation to X */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -108,6 +110,7 @@ body {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
+/* Navigation Menu */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -147,23 +150,27 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 99;
     opacity: 0;
     transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .nav-overlay.active {
     display: block;
     opacity: 1;
+    pointer-events: auto;
 }
 
-/* Mobile Navigation Styles */
+/* Mobile Navigation Styles - Hamburger appears below 768px */
 @media (max-width: 768px) {
+    /* Show hamburger on mobile */
     .hamburger {
         display: flex;
     }
     
+    /* Transform nav menu to slide-in panel */
     .nav-menu {
         position: fixed;
         top: 0;
@@ -172,20 +179,22 @@ body {
         max-width: 300px;
         height: 100vh;
         background: white;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
         padding: 80px 0 0 0;
         gap: 0;
         z-index: 100;
-        transition: right 0.3s ease;
+        transition: right 0.3s ease-in-out;
     }
     
+    /* Show menu when active */
     .nav-menu.active {
         right: 0;
     }
     
+    /* Mobile menu item styles */
     .nav-menu li {
         width: 100%;
         border-bottom: 1px solid #f0f0f0;
@@ -199,14 +208,25 @@ body {
         width: 100%;
     }
     
+    /* Active/First item styling in mobile menu */
     .nav-menu li:first-child a,
     .nav-menu li.current-page a {
         border-bottom: none;
         background: rgba(255, 99, 71, 0.1);
     }
+    
+    /* Add spacing below header on mobile */
+    .global-header {
+        margin-bottom: 20px;
+    }
 }
 
+/* Smaller mobile devices */
 @media (max-width: 480px) {
+    .global-header {
+        margin-bottom: 30px;
+    }
+    
     .logo {
         width: 60px;
         height: 60px;
@@ -236,6 +256,7 @@ body {
     }
 }
 
+/* Very small devices */
 @media (max-width: 320px) {
     .nav-menu {
         width: 100%;
@@ -247,7 +268,7 @@ body.menu-open {
     overflow: hidden;
 }
 
-/* Additional utilities for better mobile experience */
+/* Touch device optimization */
 @media (hover: none) and (pointer: coarse) {
     .rotating-logo:hover {
         transform: none;

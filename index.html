@@ -153,118 +153,44 @@
 </section>
 
         <!-- Founder Section -->
-     <section class="lifestyle-carousel-section">
-        <div class="carousel-wrapper">
-            <!-- Slide Counter -->
-            <div class="slide-counter" id="slideCounter" style="position: absolute; top: 25px; right: 30px; background: rgba(255, 102, 0, 0.9); color: #ff6600; padding: 10px 18px; border-radius: 25px; font-size: 15px; font-weight: 600; backdrop-filter: blur(10px); border: 1px solid #ff6600; z-index: 10;">
-                <span class="current" style="color: white;">1</span> / <span class="total" style="color: white;">3</span>
-            </div>
-            
-            <!-- Navigation Arrows -->
-            <div class="touch-indicator prev" onclick="prevSlide()" style="position: absolute; top: 50%; left: 25px; transform: translateY(-50%); background: rgba(255, 102, 0, 0.2); border: 2px solid #ff6600; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;"></div>
-            <div class="touch-indicator next" onclick="nextSlide()" style="position: absolute; top: 50%; right: 25px; transform: translateY(-50%); background: rgba(255, 102, 0, 0.2); border: 2px solid #ff6600; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;"></div>
-            
-            <div class="carousel-container" id="carouselContainer">
-                <!-- Clone of last slide for infinite loop -->
-                <div class="lifestyle-section carousel-slide clone" style="background-color: white; color: #ff6600; padding: 60px 0; border-top: 4px solid #ff6600; border-bottom: 4px solid #ff6600;">
-                    <div class="container">
-                        <div class="lifestyle-content" style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; justify-content: center; padding: 0 40px;">
-                            <div class="lifestyle-image" style="position: relative;">
-                                <img src="asset/Image1.jpg" alt="Mr. Rohit Verma" style="width: 250px; height: 250px; border-radius: 50%; border: 4px solid #333; object-fit: cover; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);">
-                            </div>
-                            <div class="lifestyle-text" style="flex: 1; max-width: 600px; min-width: 300px; text-align: left;">
-                                <h2 style="font-size: 32px; margin-bottom: 10px; font-weight: 700; color: #333;">Mr. Rohit Verma</h2>
-                                <h4 style="font-size: 20px; margin-bottom: 18px; font-style: italic; color: #ff6600;">Personal Growth & Life Management</h4>
-                                <p style="font-size: 18px; line-height: 1.6; color: #666;">
-                                    Mr. Rohit Verma exemplifies the perfect balance between professional success and personal fulfillment. 
-                                    His approach to life management and continuous growth has inspired many to achieve their full potential. 
-                                    He believes in data-driven decisions not just in business, but in creating a meaningful and balanced lifestyle.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+    <section class="tdm-family-section">
+            <div class="family-banner-wrapper">
+                <div class="section-title">
+                    <h2>TDM FAMILY</h2>
                 </div>
-
-                <!-- Original slides -->
-                <div class="lifestyle-section carousel-slide active" data-index="0" style="background-color: white; color: #ff6600; padding: 60px 0; border-top: 4px solid #ff6600; border-bottom: 4px solid #ff6600;">
-                    <div class="container">
-                        <div class="lifestyle-content" style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; justify-content: center; padding: 0 40px;">
-                            <div class="lifestyle-image" style="position: relative;">
-                                <img src="asset/Image2.jpg" alt="Mr. Narinder Singh Manral" style="width: 250px; height: 250px; border-radius: 50%; border: 4px solid #ff6600; object-fit: cover; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);">
-                            </div>
-                            <div class="lifestyle-text" style="flex: 1; max-width: 600px; min-width: 300px; text-align: left;">
-                                <h2 style="font-size: 32px; margin-bottom: 10px; font-weight: 700; color: #ff6600;">Mr Narinder Singh Manral</h2>
-                                <h4 style="font-size: 20px; margin-bottom: 18px; font-style: italic; color: #ff6600;">Work-Life Balance Champion</h4>
-                                <p style="font-size: 18px; line-height: 1.6; color: #ff6600;">
-                                    Mr. Narinder Singh Manral has mastered the art of maintaining perfect harmony between professional excellence and personal well-being. 
-                                    His philosophy centers on sustainable success through balanced living, inspiring others to achieve greatness without sacrificing 
-                                    their health, relationships, or personal happiness.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="slide-counter">
+                    <span class="current">1</span> / <span class="total">3</span>
                 </div>
-
-                <div class="lifestyle-section carousel-slide" data-index="1" style="background-color: white; color: #ff6600; padding: 60px 0; border-top: 4px solid #ff6600; border-bottom: 4px solid #ff6600;">
-                    <div class="container">
-                        <div class="lifestyle-content" style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; justify-content: center; padding: 0 40px;">
-                            <div class="lifestyle-image" style="position: relative;">
-                                <img src="asset/Image3.jpg" alt="Mrs. Anjali Sharma" style="width: 250px; height: 250px; border-radius: 50%; border: 4px solid #ff6600; object-fit: cover; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);">
-                            </div>
-                            <div class="lifestyle-text" style="flex: 1; max-width: 600px; min-width: 300px; text-align: left;">
-                                <h2 style="font-size: 32px; margin-bottom: 10px; font-weight: 700; color: #ff6600;">Mrs. Anjali Sharma</h2>
-                                <h4 style="font-size: 20px; margin-bottom: 18px; font-style: italic; color: #ff6600;">Achievement Celebration & Success</h4>
-                                <p style="font-size: 18px; line-height: 1.6; color: #ff6600;">
-                                    Mrs. Anjali Sharma believes in celebrating every milestone and achievement, both big and small. Her positive approach 
-                                    to recognizing success has created an environment where people thrive and feel valued. She demonstrates that celebrating 
-                                    achievements is essential for sustainable motivation and continued growth.
-                                </p>
-                            </div>
-                        </div>
+                
+                <div class="banner-nav prev" onclick="prevFamilySlide()"></div>
+                <div class="banner-nav next" onclick="nextFamilySlide()"></div>
+                
+                <div class="family-banner-container" id="familyBannerContainer">
+                    <!-- Clone of last slide -->
+                    <div class="family-banner-slide clone">
+                        <img src="asset/Image1.jpg" alt="TDM Family">
                     </div>
-                </div>
 
-                <div class="lifestyle-section carousel-slide" data-index="2" style="background-color: white; color: #333; padding: 60px 0;">
-                    <div class="container">
-                        <div class="lifestyle-content" style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; justify-content: center; padding: 0 40px;">
-                            <div class="lifestyle-image" style="position: relative;">
-                                <img src="https://via.placeholder.com/250x250/cc6600/ffffff?text=RV" alt="Mr. Rohit Verma" style="width: 250px; height: 250px; border-radius: 50%; border: 4px solid #ff6600; object-fit: cover; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);">
-                            </div>
-                            <div class="lifestyle-text" style="flex: 1; max-width: 600px; min-width: 300px; text-align: left;">
-                                <h2 style="font-size: 32px; margin-bottom: 10px; font-weight: 700; color: #ff6600;">Mr. Rohit Verma</h2>
-                                <h4 style="font-size: 20px; margin-bottom: 18px; font-style: italic; color: #ff6600;">Personal Growth & Life Management</h4>
-                                <p style="font-size: 18px; line-height: 1.6; color: #ff6600;">
-                                    Mr. Rohit Verma exemplifies the perfect balance between professional success and personal fulfillment. 
-                                    His approach to life management and continuous growth has inspired many to achieve their full potential. 
-                                    He believes in data-driven decisions not just in business, but in creating a meaningful and balanced lifestyle.
-                                </p>
-                            </div>
-                        </div>
+                    <!-- Original slides -->
+                    <div class="family-banner-slide active">
+                        <img src="asset/Image2.jpg" alt="TDM Family">
                     </div>
-                </div>
 
-                <!-- Clone of first slide for infinite loop -->
-                <div class="lifestyle-section carousel-slide clone" style="background-color: white; color: #ff6600; padding: 60px 0; border-top: 4px solid #ff6600;">
-                    <div class="container">
-                        <div class="lifestyle-content" style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; justify-content: center; padding: 0 40px;">
-                            <div class="lifestyle-image" style="position: relative;">
-                                <img src="https://via.placeholder.com/250x250/ff6600/ffffff?text=NSM" alt="Mr. Narinder Singh Manral" style="width: 250px; height: 250px; border-radius: 50%; border: 4px solid #ff6600; object-fit: cover; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);">
-                            </div>
-                            <div class="lifestyle-text" style="flex: 1; max-width: 600px; min-width: 300px; text-align: left;">
-                                <h2 style="font-size: 32px; margin-bottom: 10px; font-weight: 700; color: #ff6600;">Mr Narinder Singh Manral</h2>
-                                <h4 style="font-size: 20px; margin-bottom: 18px; font-style: italic; color: #ff6600;">Work-Life Balance Champion</h4>
-                                <p style="font-size: 18px; line-height: 1.6; color: #ff6600;">
-                                    Mr. Narinder Singh Manral has mastered the art of maintaining perfect harmony between professional excellence and personal well-being. 
-                                    His philosophy centers on sustainable success through balanced living, inspiring others to achieve greatness without sacrificing 
-                                    their health, relationships, or personal happiness.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="family-banner-slide">
+                        <img src="asset/Image3.jpg" alt="TDM Family">
+                    </div>
+
+                    <div class="family-banner-slide">
+                        <img src="asset/Image1.jpg" alt="TDM Family">
+                    </div>
+
+                    <!-- Clone of first slide -->
+                    <div class="family-banner-slide clone">
+                        <img src="asset/Image2.jpg" alt="TDM Family">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
 
     <!-- Include Global Footer -->
@@ -274,25 +200,61 @@
     <script src="components/header.js"></script>
     <script src="components/footer.js"></script>
     <script src="index-main.js"></script>
-    <script>
-        // Load header and footer components
-        document.addEventListener('DOMContentLoaded', function() {
+       <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Loading components...');
+            
             // Load header
             fetch('components/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-placeholder').innerHTML = data;
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Header not found: ' + response.status);
+                    }
+                    return response.text();
                 })
-                .catch(error => console.error('Error loading header:', error));
+                .then(data => {
+                    console.log('Header HTML loaded');
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    
+                    // Initialize header after a small delay
+                    setTimeout(function() {
+                        if (typeof window.initializeHeader === 'function') {
+                            window.initializeHeader();
+                        } else {
+                            console.error('initializeHeader function not found!');
+                        }
+                    }, 100);
+                })
+                .catch(error => {
+                    console.error('Error loading header:', error);
+                });
 
             // Load footer
             fetch('components/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-placeholder').innerHTML = data;
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Footer not found: ' + response.status);
+                    }
+                    return response.text();
                 })
-                .catch(error => console.error('Error loading footer:', error));
+                .then(data => {
+                    console.log('Footer HTML loaded');
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    
+                    // Initialize footer if needed
+                    setTimeout(function() {
+                        if (typeof window.initializeFooter === 'function') {
+                            window.initializeFooter();
+                        }
+                    }, 100);
+                })
+                .catch(error => {
+                    console.error('Error loading footer:', error);
+                });
         });
+    </script>
+    <script>
+       
        
     class ImprovedCarousel {
             constructor() {
@@ -456,6 +418,163 @@
   
 
     </script>
-    
+     <script>
+        // TDM Family Banner Carousel
+        class FamilyBannerCarousel {
+            constructor() {
+                this.currentSlide = 1;
+                this.totalSlides = 3;
+                this.slideInterval = 4000;
+                this.intervalId = null;
+                this.isTransitioning = false;
+                
+                this.container = document.getElementById('familyBannerContainer');
+                this.slides = document.querySelectorAll('.family-banner-slide');
+                
+                if (this.container && this.slides.length > 0) {
+                    this.init();
+                } else {
+                    console.error('Family banner carousel elements not found');
+                }
+            }
+
+            init() {
+                // Set initial position
+                this.container.style.transform = 'translateX(-20%)';
+                this.updateActiveSlide();
+                this.updateCounter();
+                this.startAutoSlide();
+                this.addTouchSupport();
+                
+                // Pause on hover
+                this.container.addEventListener('mouseenter', () => this.pauseAutoSlide());
+                this.container.addEventListener('mouseleave', () => this.startAutoSlide());
+                
+                console.log('Family carousel initialized');
+            }
+
+            updateSlidePosition() {
+                if (this.isTransitioning) return;
+                
+                this.isTransitioning = true;
+                const translateX = -this.currentSlide * 20;
+                this.container.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                this.container.style.transform = `translateX(${translateX}%)`;
+                
+                setTimeout(() => {
+                    if (this.currentSlide === 0) {
+                        this.currentSlide = this.totalSlides;
+                        this.container.style.transition = 'none';
+                        this.container.style.transform = `translateX(-${this.currentSlide * 20}%)`;
+                    } else if (this.currentSlide === this.totalSlides + 1) {
+                        this.currentSlide = 1;
+                        this.container.style.transition = 'none';
+                        this.container.style.transform = `translateX(-${this.currentSlide * 20}%)`;
+                    }
+                    
+                    this.updateActiveSlide();
+                    this.isTransitioning = false;
+                }, 800);
+            }
+
+            updateActiveSlide() {
+                this.slides.forEach((slide, index) => {
+                    const isActive = (this.currentSlide >= 1 && this.currentSlide <= 3) && (index === this.currentSlide);
+                    slide.classList.toggle('active', isActive);
+                });
+            }
+
+            updateCounter() {
+                const counter = document.querySelector('.tdm-family-section .slide-counter');
+                if (counter) {
+                    let displayNumber = this.currentSlide;
+                    if (this.currentSlide === 0) displayNumber = 3;
+                    if (this.currentSlide === 4) displayNumber = 1;
+                    counter.querySelector('.current').textContent = displayNumber;
+                }
+            }
+
+            nextSlide() {
+                this.currentSlide++;
+                this.updateSlidePosition();
+                this.updateCounter();
+            }
+
+            prevSlide() {
+                this.currentSlide--;
+                this.updateSlidePosition();
+                this.updateCounter();
+            }
+
+            startAutoSlide() {
+                this.pauseAutoSlide();
+                this.intervalId = setInterval(() => this.nextSlide(), this.slideInterval);
+            }
+
+            pauseAutoSlide() {
+                if (this.intervalId) {
+                    clearInterval(this.intervalId);
+                    this.intervalId = null;
+                }
+            }
+
+            addTouchSupport() {
+                let startX = 0;
+                let endX = 0;
+                const minSwipe = 50;
+
+                this.container.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    this.pauseAutoSlide();
+                }, { passive: true });
+
+                this.container.addEventListener('touchmove', (e) => {
+                    endX = e.touches[0].clientX;
+                }, { passive: true });
+
+                this.container.addEventListener('touchend', () => {
+                    const deltaX = startX - endX;
+                    
+                    if (Math.abs(deltaX) > minSwipe) {
+                        if (deltaX > 0) {
+                            this.nextSlide();
+                        } else {
+                            this.prevSlide();
+                        }
+                    }
+                    this.startAutoSlide();
+                }, { passive: true });
+            }
+        }
+
+        // Global carousel instance
+        let familyCarousel = null;
+
+        // Global functions for navigation
+        function nextFamilySlide() {
+            if (familyCarousel) {
+                familyCarousel.nextSlide();
+            }
+        }
+
+        function prevFamilySlide() {
+            if (familyCarousel) {
+                familyCarousel.prevSlide();
+            }
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(() => {
+                    familyCarousel = new FamilyBannerCarousel();
+                }, 100);
+            });
+        } else {
+            setTimeout(() => {
+                familyCarousel = new FamilyBannerCarousel();
+            }, 100);
+        }
+    </script>
 </body>
 </html>
