@@ -18,12 +18,15 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #fafafa;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 /* Header */
@@ -34,17 +37,18 @@ body {
 }
 
 .company-name {
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px);
     color: #ff8c00;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
 .main-title {
-    font-size: 42px;
+    font-size: clamp(28px, 5vw, 42px);
     font-weight: 700;
     color: #ff8c00;
     margin-bottom: 0;
+    line-height: 1.2;
 }
 
 /* Hero Section */
@@ -62,7 +66,7 @@ body {
 }
 
 .hero-title {
-    font-size: 36px;
+    font-size: clamp(28px, 4vw, 36px);
     font-weight: 700;
     color: #ff8c00;
     margin-bottom: 24px;
@@ -70,7 +74,7 @@ body {
 }
 
 .hero-description {
-    font-size: 16px;
+    font-size: clamp(15px, 1.5vw, 16px);
     color: #666;
     line-height: 1.6;
 }
@@ -90,7 +94,7 @@ body {
 
 /* Section Titles */
 .section-title {
-    font-size: 24px;
+    font-size: clamp(22px, 3vw, 24px);
     font-weight: 600;
     color: #ff8c00;
     margin-bottom: 40px;
@@ -203,7 +207,7 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 24px;
 }
 
@@ -222,14 +226,14 @@ body {
 }
 
 .service-title {
-    font-size: 18px;
+    font-size: clamp(17px, 2vw, 18px);
     font-weight: 600;
     color: #333;
     margin-bottom: 12px;
 }
 
 .service-description {
-    font-size: 14px;
+    font-size: clamp(14px, 1.5vw, 14px);
     color: #666;
     line-height: 1.6;
 }
@@ -241,7 +245,7 @@ body {
 
 .operations-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
     gap: 30px;
 }
 
@@ -253,14 +257,14 @@ body {
 }
 
 .operation-title {
-    font-size: 18px;
+    font-size: clamp(17px, 2vw, 18px);
     font-weight: 600;
     color: #333;
     margin-bottom: 12px;
 }
 
 .operation-description {
-    font-size: 14px;
+    font-size: clamp(14px, 1.5vw, 14px);
     color: #666;
     line-height: 1.6;
     margin-bottom: 16px;
@@ -287,19 +291,30 @@ body {
     left: 0;
 }
 
-/* Responsive Design */
+/* Tablet Landscape / Desktop (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .hero {
+        gap: 40px;
+    }
+
+    .operations-grid {
+        gap: 24px;
+    }
+}
+
+/* Tablet Portrait (max-width: 768px) */
 @media (max-width: 768px) {
     :root {
-        --marquee-elements-displayed: 3;
+        --marquee-elements-displayed: 4;
         --marquee-height: 80px;
     }
 
-    .main-title {
-        font-size: 28px;
-    }
-    
-    .company-name {
-        font-size: 14px;
+    .container {
+        padding: 0 20px;
     }
     
     .hero {
@@ -310,23 +325,19 @@ body {
         padding: 20px 0;
     }
     
+    .hero-content {
+        max-width: 100%;
+    }
+    
     .hero-image {
         flex: none;
         max-width: 100%;
+        width: 100%;
         align-self: center;
     }
     
     .hero-image img {
-        height: 200px;
-    }
-    
-    .hero-title {
-        font-size: 28px;
-    }
-    
-    .hero-description {
-        max-width: 100%;
-        font-size: 15px;
+        height: 220px;
     }
     
     .marquee-content {
@@ -363,34 +374,26 @@ body {
     }
 
     .section-title {
-        font-size: 22px;
         margin-bottom: 30px;
+    }
+
+    .patrons, .partners {
+        margin-bottom: 60px;
     }
 }
 
+/* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
+    :root {
+        --marquee-elements-displayed: 3;
+    }
+
     .container {
-        padding: 0 15px;
+        padding: 0 16px;
     }
     
-    .main-title {
-        font-size: 24px;
-    }
-    
-    .company-name {
-        font-size: 13px;
-    }
-    
-    .hero-title {
-        font-size: 24px;
-    }
-    
-    .hero-description {
-        font-size: 14px;
-    }
-    
-    .section-title {
-        font-size: 20px;
+    .hero-image img {
+        height: 200px;
     }
     
     .marquee-content {
@@ -403,8 +406,8 @@ body {
     }
     
     .logo-item {
-        flex: 0 0 85px;
-        height: 55px;
+        flex: 0 0 90px;
+        height: 60px;
     }
     
     .service-card,
@@ -412,18 +415,72 @@ body {
         padding: 20px 16px;
     }
     
-    .hero-image img {
-        height: 180px;
-    }
-    
     .header {
         padding: 12px 0 6px;
-        margin-bottom: 25px;
+        margin-bottom: 24px;
     }
 
     .marquee-container {
         padding: 20px 0;
         margin-bottom: 40px;
+    }
+
+    .patrons, .partners {
+        margin-bottom: 48px;
+    }
+
+    .services {
+        margin-bottom: 48px;
+    }
+
+    .operations {
+        margin-bottom: 48px;
+    }
+}
+
+/* Extra Small Mobile (max-width: 360px) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .logo-item {
+        flex: 0 0 80px;
+        height: 55px;
+    }
+
+    .marquee-content {
+        gap: 12px;
+    }
+
+    .hero-image img {
+        height: 180px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .logo-item:hover {
+        transform: none;
+    }
+
+    .logo-item:active {
+        transform: scale(0.98);
+    }
+
+    .service-card:hover {
+        transform: none;
+    }
+
+    .service-card:active {
+        transform: translateY(1px);
+    }
+
+    /* Larger tap targets for mobile */
+    .operation-list li {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -437,6 +494,7 @@ body {
     .marquee-container {
         overflow-x: auto;
         background: none;
+        -webkit-overflow-scrolling: touch;
     }
     
     .marquee-content {
@@ -444,12 +502,38 @@ body {
         gap: 15px;
     }
 
-    .logo-item:hover {
+    .logo-item:hover,
+    .service-card:hover {
         transform: none;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo-item img {
+        image-rendering: -webkit-optimize-contrast;
     }
 }
 
 /* Loading optimization */
 .logo-item img {
     loading: lazy;
+}
+
+/* Print Styles */
+@media print {
+    .marquee-container {
+        overflow: visible;
+    }
+
+    .marquee-content {
+        animation: none;
+        flex-wrap: wrap;
+    }
+
+    .hero-image img,
+    .service-card,
+    .operation-card {
+        box-shadow: none;
+    }
 }
