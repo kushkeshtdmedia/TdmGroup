@@ -20,58 +20,49 @@
             line-height: 1.6;
         }
 
-        /* .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
+        .hero-section {
             height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             position: relative;
-        } */
-        .hero-section {
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
+            overflow: hidden;
+        }
 
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-.hero-banner-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 1;
-}
+        .hero-banner-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+        }
 
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
 
-
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 2;
-}
-
-      .hero-content {
-    max-width: 800px;
-    padding: 0 20px;
-    position: relative;
-    z-index: 3;
-}
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 3;
+        }
 
         .hero-content h1 {
             font-size: 3.5rem;
@@ -261,16 +252,19 @@
         .card-image-1 { background-image: url('asset/PrecisionImage.jpg'); }
         .card-image-2 { background-image: url('asset/PhotoAdvance.jpg'); }
         .card-image-3 { background-image: url('asset/ComputerVision.jpg'); }
-        .card-image-4 { background-image: url('https://images.unsplash.com/photo-1559757154-5c30478b3088?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
-        .card-image-5 { background-image: url('https://images.unsplash.com/photo-1576671081837-49000212a370?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
-        .card-image-6 { background-image: url('https://images.unsplash.com/photo-1559757154-6dd4ba2dbd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .card-image-4 { background-image: url('asset/MicroInstrumentation.jpg'); }
+        .card-image-5 { background-image: url('asset/OrFlow.jpg'); }
+        .card-image-6 { background-image: url('asset/Telesurgery.jpg'); }
 
         /* Service card images */
-        .service-1 { background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
-        .service-2 { background-image: url('https://images.unsplash.com/photo-1559757175-5269111a4b84?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
-        .service-3 { background-image: url('https://images.unsplash.com/photo-1576671081837-49000212a370?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
-        .service-4 { background-image: url('https://images.unsplash.com/photo-1559757154-5c30478b3088?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
-        .service-5 { background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); }
+        .service-1 { background-image: url('asset/oncologyTreatment.jpg'); }
+        .service-2 { background-image: url('asset/hepatobiliaryPics.jpg'); }
+        .service-3 { background-image: url('asset/FeaturedServicesPic.jpg'); }
+        .service-4 { background-image: url('asset/SurgicalRobotic.jpg'); }
+        .service-5 { background-image: url('asset/SurgeonCommand.jpg'); }
+        .service-6 { background-image: url('asset/cardioImage.jpg'); }
+        .service-7 { background-image: url('asset/orthopedic.jpg'); }
+        .service-8 { background-image: url('asset/uro&renal.jpg'); }
 
         @media (max-width: 768px) {
             .hero-content h1 {
@@ -295,13 +289,13 @@
      <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
- <section class="hero-section">
+      <div class="container">
+  <section class="hero-section">
     <img src="asset/healthBanner.jpg" alt="Surgical Robotics" class="hero-banner-image">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1 style="color:#FF8C00">Precision Robotics for Minimally Invasive Surgery</h1>
         <p style="color:#FF8C00">Advanced computer-assisted precision imaging, and unguided assistance to empower surgeons and improve patient outcomes.</p>
-        <button class="btn-primary">Explore Platform</button>
     </div>
 </section>
 
@@ -317,7 +311,7 @@
                     <div class="card-icon">🎯</div>
                     <h3>Precision Targeting</h3>
                     <p>Haptic feedback and motion scaling deliver unparalleled dexterity for delicate procedures.</p>
-                    <a href="#" class="btn-learn-more">Learn More →</a>
+                  
                 </div>
             </div>
 
@@ -327,7 +321,7 @@
                     <div class="card-icon">🔍</div>
                     <h3>Advanced Imaging</h3>
                     <p>Integrated 3D visualization and fluorescence imaging improve intraoperative decision-making.</p>
-                    <a href="#" class="btn-learn-more">Learn More →</a>
+                  
                 </div>
             </div>
 
@@ -337,7 +331,7 @@
                     <div class="card-icon">👁️</div>
                     <h3>Computer Vision</h3>
                     <p>Computer vision models provide context-aware prompts and safety boundaries.</p>
-                    <a href="#" class="btn-learn-more">Learn More →</a>
+                  
                 </div>
             </div>
         </div>
@@ -386,6 +380,30 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="service-card">
+                <div class="service-image service-6">
+                    <div class="service-overlay">
+                        <div class="service-title">Cardiac & Thoracic Surgery</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image service-7">
+                    <div class="service-overlay">
+                        <div class="service-title">Orthopedic Procedures</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-image service-8">
+                    <div class="service-overlay">
+                        <div class="service-title">Urology & Renal Surgery</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -401,7 +419,7 @@
                     <div class="card-icon">🔧</div>
                     <h3>Micro-Instrumentation</h3>
                     <p>Slimmer, more flexible tools reduce patient trauma and recovery time.</p>
-                    <a href="#" class="btn-learn-more">Learn More</a>
+                    
                 </div>
             </div>
 
@@ -411,7 +429,7 @@
                     <div class="card-icon">⚡</div>
                     <h3>OR Workflow</h3>
                     <p>Seamless integration with EMR, scheduling, and sterilization management.</p>
-                    <a href="#" class="btn-learn-more">Learn More</a>
+                    
                 </div>
             </div>
 
@@ -421,7 +439,7 @@
                     <div class="card-icon">🌐</div>
                     <h3>Telesurgery</h3>
                     <p>Low-latency control enables supervised remote procedures and expert oversight.</p>
-                    <a href="#" class="btn-learn-more">Learn More</a>
+                    
                 </div>
             </div>
         </div>
@@ -439,7 +457,7 @@
                     <div class="card-icon">📊</div>
                     <h3>Clinical Studies</h3>
                     <p>Reduced complications and shorter hospital stays across 1,200 procedures.</p>
-                    <a href="#" class="btn-learn-more">Read Study</a>
+                 
                 </div>
             </div>
 
@@ -449,7 +467,7 @@
                     <div class="card-icon">🏥</div>
                     <h3>Hospital Trials</h3>
                     <p>Collaborations with leading hospitals demonstrate reproducibility and safety.</p>
-                    <a href="#" class="btn-learn-more">Read Trial</a>
+                   
                 </div>
             </div>
 
@@ -459,11 +477,12 @@
                     <div class="card-icon">🎓</div>
                     <h3>Training Programs</h3>
                     <p>Comprehensive curriculum with hands-on simulators and metrics-based assessment.</p>
-                    <a href="#" class="btn-learn-more">Explore Program</a>
+                   
                 </div>
             </div>
         </div>
     </section>
+    </div>
      <div id="footer-placeholder"></div>
 </body>
   <script src="components/header.js"></script>
