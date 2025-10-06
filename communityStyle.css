@@ -169,7 +169,7 @@ body {
 
 .hero-text {
     font-size: 16px;
-    color: #FF8C00;
+    color: black;
     line-height: 1.8;
 }
 
@@ -188,7 +188,7 @@ body {
 }
 
 .programs-subtitle {
-    color: #FF8C00;
+    color: black;
     font-size: 16px;
     font-style: italic;
 }
@@ -201,12 +201,35 @@ body {
 }
 
 .program-card {
+    position: relative;
     background: white;
     padding: 40px 30px;
     border-radius: 15px;
     border: 3px solid #FF8C00;
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(244, 162, 97, 0.1);
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Add overlay for better text readability */
+.program-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    border-radius: 15px;
+    z-index: 1;
+    transition: all 0.3s ease;
 }
 
 .program-card:hover {
@@ -215,17 +238,23 @@ body {
     border-color: #e76f51;
 }
 
+
+
 .program-title {
     font-size: 24px;
-    color: #FF8C00;
+    color: white;
     margin-bottom: 15px;
     font-weight: 600;
+    position: relative;
+    z-index: 2;
 }
 
 .program-description {
-    color: #FF8C00;
+    color: white;
     font-size: 14px;
     line-height: 1.6;
+    position: relative;
+    z-index: 2;
 }
 
 /* Statistics Section Styles */
@@ -275,7 +304,7 @@ body {
 }
 
 .community-subtitle {
-    color: #FF8C00;
+    color: black;
     font-size: 16px;
     font-style: italic;
 }
@@ -353,7 +382,7 @@ body {
 }
 
 .testimonials-subtitle {
-    color: #FF8C00;
+    color: black;
     font-size: 16px;
     font-style: italic;
 }
@@ -383,7 +412,7 @@ body {
 }
 
 .testimonial-content {
-    color: #FF8C00;
+    color:black;
     font-size: 16px;
     line-height: 1.7;
     font-style: italic;
