@@ -228,7 +228,7 @@ body {
 .service-title {
     font-size: clamp(17px, 2vw, 18px);
     font-weight: 600;
-    color: #333;
+    color:#ff8c00;
     margin-bottom: 12px;
 }
 
@@ -259,7 +259,7 @@ body {
 .operation-title {
     font-size: clamp(17px, 2vw, 18px);
     font-weight: 600;
-    color: #333;
+    color: #ff8c00;
     margin-bottom: 12px;
 }
 

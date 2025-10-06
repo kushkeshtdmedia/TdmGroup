@@ -8,31 +8,132 @@
     <link rel="stylesheet" href="communityStyle.css">
     <link rel="stylesheet" href="components/header.css">
     <link rel="stylesheet" href="components/footer.css">
+    <style>
+        /* Override CTA overlay to black */
+        .cta-overlay {
+            background: rgba(0, 0, 0, 0.6) !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+        
+        .cta-section {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-button {
+            padding: 18px 48px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: white;
+            color: #ff8c00;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .slide-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 3;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: white;
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        .cta-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .cta-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .cta-slide.active {
+            opacity: 1;
+        }
+        
+        .cta-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 
 <body>
 
     <div id="header-placeholder"></div>
-      <div class="container">
-    <!-- Banner Section -->
-    <section class="banner-section">
-        <div class="banner-overlay">
-            <div class="banner-content">
-                <div class="welcome-tag">Welcome to TDM FOUNDATION</div>
-                <h1 class="banner-title" style="color: #FF8C00;">Empowering Dreams, Transforming Lives</h1>
-                <p class="banner-subtitle" style="color: white;">
-                    Join our community-driven mission to provide free, quality education to every child. Together, we
-                    foster curiosity, confidence, and opportunities that change futures.
-                </p>
+    
+    <div class="container">
+        <!-- Banner Section -->
+        <section class="banner-section">
+            <div class="banner-overlay">
+                <div class="banner-content">
+                    <div class="welcome-tag">Welcome to TDM FOUNDATION</div>
+                    <h1 class="banner-title">Empowering Dreams, Transforming Lives</h1>
+                    <p class="banner-subtitle">
+                        Join our community-driven mission to provide free, quality education to every child. Together, we
+                        foster curiosity, confidence, and opportunities that change futures.
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-image">
-                <img src="asset/TDM_1.JPG"
-                    alt="Children studying together">
+                <img src="asset/TDM_1.JPG" alt="Children studying together">
             </div>
             <div class="hero-content">
                 <h2 class="section-title">Our Vision</h2>
@@ -44,6 +145,7 @@
                     safe spaces to learn and grow. Your support helps us empower young minds to dream big and become
                     leaders of tomorrow.
                 </p>
+            </div>
         </section>
 
         <!-- Programs Section -->
@@ -153,20 +255,70 @@
                 </div>
             </div>
         </section>
-
-        <!-- Call to Action -->
-<section class="cta-section">
-    <h2 class="cta-title">Join the Mission</h2>
-    <p class="cta-text">Become a volunteer or support a program to help us reach more children.</p>
-    <a href="https://tdmfoundation.org.in/" class="cta-button" style="text-decoration: none;">Get Involved</a>
-</section>
     </div>
- </div>
+
+    <!-- Call to Action with Sliding Banners - MOVED OUTSIDE CONTAINER -->
+    <section class="cta-section">
+        <div class="cta-slideshow">
+            <div class="cta-slide active">
+                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1200&h=500&fit=crop" alt="Children learning together">
+            </div>
+            <div class="cta-slide">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=500&fit=crop" alt="Education support">
+            </div>
+            <div class="cta-slide">
+                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1200&h=500&fit=crop" alt="Community volunteers">
+            </div>
+            <div class="cta-slide">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=500&fit=crop" alt="Students with backpacks">
+            </div>
+        </div>
+        
+        <div class="cta-overlay">
+            <a href="https://tdmfoundation.org.in/" class="cta-button">Get Involved</a>
+        </div>
+        
+        <div class="slide-indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+            <span class="indicator" onclick="goToSlide(3)"></span>
+        </div>
+    </section>
+    
     <div id="footer-placeholder"></div>
-</body>
-<script src="components/header.js"></script>
-<script src="components/footer.js"></script>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="main.js"></script>
    <script>
+       let currentSlide = 0;
+        const slides = document.querySelectorAll('.cta-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const slideInterval = 5000; // 5 seconds
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance slides every 5 seconds
+        setInterval(nextSlide, slideInterval);
+
+        // Component loading
         document.addEventListener('DOMContentLoaded', function () {
             console.log('Loading components...');
             
@@ -182,7 +334,6 @@
                     console.log('Header HTML loaded');
                     document.getElementById('header-placeholder').innerHTML = data;
                     
-                    // Initialize header after a small delay
                     setTimeout(function() {
                         if (typeof window.initializeHeader === 'function') {
                             window.initializeHeader();
@@ -194,9 +345,7 @@
                 .catch(error => {
                     console.error('Error loading header:', error);
                 });
-
-            // Load footer
-            fetch('components/footer.html')
+                  fetch('components/footer.html')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Footer not found: ' + response.status);
@@ -207,7 +356,6 @@
                     console.log('Footer HTML loaded');
                     document.getElementById('footer-placeholder').innerHTML = data;
                     
-                    // Initialize footer if needed
                     setTimeout(function() {
                         if (typeof window.initializeFooter === 'function') {
                             window.initializeFooter();
@@ -218,6 +366,6 @@
                     console.error('Error loading footer:', error);
                 });
         });
-    </script>
-
+   </script>
+</body>
 </html>

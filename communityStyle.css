@@ -1,5 +1,8 @@
-/* TDM Foundation Styles */
+/* ========================================
+   TDM Foundation - Community Page Styles
+   ======================================== */
 
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +12,18 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #FF8C00; /* Saffron color */
+    color: #333;
 }
 
-/* Banner Section Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   Banner Section
+   ======================================== */
 .banner-section {
     position: relative;
     min-height: 80vh;
@@ -36,7 +47,6 @@ body {
     text-align: center;
     border-radius: 20px;
     padding: 80px 60px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .welcome-tag {
@@ -57,12 +67,9 @@ body {
     font-size: 72px;
     font-weight: 800;
     margin-bottom: 30px;
+    color: #FF8C00;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     line-height: 1.1;
-    background: linear-gradient(45deg, #FF8C00,#FF8C00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .banner-subtitle {
@@ -74,54 +81,11 @@ body {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
 }
 
-.banner-cta {
-    background: linear-gradient(45deg, #FF8C00, #e76f51);
-    color: white;
-    padding: 18px 50px;
-    border: none;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 8px 30px rgba(244, 162, 97, 0.4);
-    position: relative;
-    overflow: hidden;
-}
-
-.banner-cta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(244, 162, 97, 0.6);
-    background: linear-gradient(45deg, #e76f51, #FF8C00);
-}
-
-.banner-cta::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.6s;
-}
-
-.banner-cta:hover::before {
-    left: 100%;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Hero Section Styles */
+/* ========================================
+   Hero Section
+   ======================================== */
 .hero-section {
     display: flex;
     align-items: center;
@@ -169,11 +133,13 @@ body {
 
 .hero-text {
     font-size: 16px;
-    color: black;
+    color: #333;
     line-height: 1.8;
 }
 
-/* Programs Section Styles */
+/* ========================================
+   Programs Section
+   ======================================== */
 .programs-section {
     margin: 120px 0;
 }
@@ -188,7 +154,7 @@ body {
 }
 
 .programs-subtitle {
-    color: black;
+    color: #666;
     font-size: 16px;
     font-style: italic;
 }
@@ -218,7 +184,6 @@ body {
     overflow: hidden;
 }
 
-/* Add overlay for better text readability */
 .program-card::before {
     content: '';
     position: absolute;
@@ -238,8 +203,6 @@ body {
     border-color: #e76f51;
 }
 
-
-
 .program-title {
     font-size: 24px;
     color: white;
@@ -257,7 +220,9 @@ body {
     z-index: 2;
 }
 
-/* Statistics Section Styles */
+/* ========================================
+   Statistics Section
+   ======================================== */
 .stats-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -278,7 +243,6 @@ body {
     font-weight: 900;
     color: #FF8C00;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(244, 162, 97, 0.1);
 }
 
 .stat-label {
@@ -289,7 +253,9 @@ body {
     letter-spacing: 1px;
 }
 
-/* Community Section Styles */
+/* ========================================
+   Community Section
+   ======================================== */
 .community-section {
     margin: 120px 0;
 }
@@ -304,7 +270,7 @@ body {
 }
 
 .community-subtitle {
-    color: black;
+    color: #666;
     font-size: 16px;
     font-style: italic;
 }
@@ -364,7 +330,9 @@ body {
     margin: 0;
 }
 
-/* Testimonials Section Styles */
+/* ========================================
+   Testimonials Section
+   ======================================== */
 .testimonials-section {
     margin: 100px 0;
     background: linear-gradient(135deg, #fef7ed, #fff7ed);
@@ -382,7 +350,7 @@ body {
 }
 
 .testimonials-subtitle {
-    color: black;
+    color: #666;
     font-size: 16px;
     font-style: italic;
 }
@@ -412,48 +380,56 @@ body {
 }
 
 .testimonial-content {
-    color:black;
+    color: #333;
     font-size: 16px;
     line-height: 1.7;
     font-style: italic;
 }
 
-/* Call to Action Section Styles */
+/* ========================================
+   Call to Action - Sliding Banner Section
+   ======================================== */
 .cta-section {
-    text-align: center;
-    padding: 100px 60px;
-    background: linear-gradient(135deg, #FF8C00, #e76f51);
-    border-radius: 20px;
-    margin: 100px 0;
     position: relative;
+    height: 500px;
+    margin: 100px 0;
     overflow: hidden;
 }
 
-.cta-section::before {
-    content: '';
+.cta-slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cta-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.cta-slide.active {
+    opacity: 1;
+}
+
+.cta-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
-    background-size: 50px 50px;
-}
-
-.cta-title {
-    font-size: 42px;
-    color: white;
-    margin-bottom: 25px;
-    font-weight: 700;
-    position: relative;
-    z-index: 2;
-}
-
-.cta-text {
-    color: white;
-    font-size: 18px;
-    margin-bottom: 40px;
-    position: relative;
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.7), rgba(231, 111, 81, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
 }
 
@@ -469,18 +445,47 @@ body {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     background: #fefefe;
 }
 
-/* Responsive Design */
+.slide-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+/* Tablet */
 @media (max-width: 768px) {
     .banner-title {
         font-size: 48px;
@@ -526,8 +531,18 @@ body {
     .stat-number {
         font-size: 48px;
     }
+    
+    .cta-section {
+        height: 400px;
+    }
+    
+    .cta-button {
+        padding: 15px 40px;
+        font-size: 16px;
+    }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
     .banner-section {
         min-height: 70vh;
@@ -575,10 +590,11 @@ body {
     }
     
     .cta-section {
-        padding: 80px 30px;
+        height: 350px;
     }
     
-    .cta-title {
-        font-size: 32px;
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 14px;
     }
 }
