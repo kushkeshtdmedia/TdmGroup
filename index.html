@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="components/header.css">
     <link rel="stylesheet" href="components/footer.css">
     <link rel="stylesheet" href="index-main.css">
+    <style>
+        /* Enhanced CTA Button Alignment */
+        .cta-button {
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Enhanced Arrow Styling */
+        .arrow-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            flex-shrink: 0;
+            line-height: 1;
+            padding-bottom: 4px;
+        }
+
+        .cta-button:hover .arrow-circle {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(5px);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <!-- Include Global Header -->
@@ -20,7 +55,7 @@
                         <div class="tagline-top">WHERE IDEAS BECOME ENTERPRISE</div>
                         <div class="brand-name" style="color: white;">NARINDER</div>
                         <h1 class="main-heading">Our Lines of Business</h1>
-                        <a href="#explore" class="cta-button">
+                        <a href="#business-spectrum" class="cta-button">
                             LET'S TALK ABOUT THEM
                             <div class="arrow-circle">→</div>
                         </a>
@@ -85,7 +120,7 @@
         </section>
 
         <!-- Business Spectrum Section -->
-<section class="business-spectrum">
+<section class="business-spectrum" id="business-spectrum">
     <div class="container">
         <div class="section-header">
             <h2>Business Spectrum</h2>
