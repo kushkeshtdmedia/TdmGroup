@@ -136,10 +136,17 @@ body {
     color: #FF6347;
 }
 
-.nav-menu li:first-child a,
-.nav-menu li.current-page a {
-    color: #FF6347;
-    border-bottom: 2px solid #FF6347;
+/* Active/Current Page Styling - BRIGHT RED */
+.nav-menu li.current-page a,
+.nav-menu li a.active-link {
+    color: #FF0000 !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px !important;
+    background: rgba(255, 0, 0, 0.15) !important;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
 /* Mobile Overlay */
@@ -208,11 +215,15 @@ body {
         width: 100%;
     }
     
-    /* Active/First item styling in mobile menu */
-    .nav-menu li:first-child a,
-    .nav-menu li.current-page a {
-        border-bottom: none;
-        background: rgba(255, 99, 71, 0.1);
+    /* Active/Current Page styling in mobile menu - BRIGHT RED */
+    .nav-menu li.current-page a,
+    .nav-menu li a.active-link {
+        background: rgba(255, 0, 0, 0.2) !important;
+        border-left: 5px solid #FF0000 !important;
+        font-weight: 700 !important;
+        color: #FF0000 !important;
+        text-decoration: underline !important;
+        text-underline-offset: 3px;
     }
     
     /* Add spacing below header on mobile */

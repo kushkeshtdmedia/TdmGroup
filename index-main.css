@@ -30,12 +30,12 @@ body {
 /* ===== BANNER SECTION ===== */
 .banner-section {
     position: relative;
-    height: clamp(500px, 60vh, 600px);
+    height: clamp(495px, 70vh, 700px);
     margin: 0 auto;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    background-image: url('asset/OurLinesOfBusiness.png');  
+    background-image: url('asset/Banner.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,11 +49,11 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 clamp(20px, 5vw, 60px);
-    gap: 30px;
+    gap: clamp(30px, 5vw, 50px);
 }
 
 .content-left {
-    flex: 1;
+    flex: 0.8;
     max-width: 500px;
     min-width: 0;
 }
@@ -122,9 +122,9 @@ body {
     font-size: clamp(12px, 2vw, 16px);
 }
 
-/* Profile Container */
+/* Right Content - New Image */
 .content-right {
-    flex: 1;
+    flex: 1.2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,74 +132,12 @@ body {
     min-width: 0;
 }
 
-.profile-container {
-    position: relative;
-    width: clamp(200px, 25vw, 320px);
-    height: clamp(200px, 25vw, 320px);
-}
-
-.ink-circle {
-    position: absolute;
+.banner-right-image {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    filter: blur(3px);
-    transform: rotate(-15deg);
-}
-
-.profile-image {
-    position: absolute;
-    top: 52%;
-    left: 29%;
-    transform: translate(-50%, -50%);
-    width: clamp(220px, 28vw, 380px);
-    height: clamp(220px, 28vw, 406px);
-    border-radius: 50%;
-    object-fit: cover;
-    z-index: 5;
-    filter: contrast(1.1) brightness(1.05);
-}
-
-.ink-splash {
-    position: absolute;
-    border-radius: 50%;
-    mix-blend-mode: multiply;
-}
-
-.ink-splash:nth-child(1) {
-    width: clamp(12px, 2vw, 18px);
-    height: clamp(12px, 2vw, 18px);
-    background: rgba(255, 140, 0, 0.7);
-    top: 8%;
-    left: 15%;
-    filter: blur(1px);
-}
-
-.ink-splash:nth-child(2) {
-    width: clamp(8px, 1.5vw, 12px);
-    height: clamp(8px, 1.5vw, 12px);
-    background: rgba(255, 69, 0, 0.8);
-    top: 85%;
-    right: 12%;
-    filter: blur(0.5px);
-}
-
-.ink-splash:nth-child(3) {
-    width: clamp(15px, 2.5vw, 22px);
-    height: clamp(15px, 2.5vw, 22px);
-    background: rgba(220, 20, 60, 0.6);
-    bottom: 15%;
-    left: 8%;
-    filter: blur(2px);
-}
-
-.ink-splash:nth-child(4) {
-    width: clamp(10px, 1.8vw, 15px);
-    height: clamp(10px, 1.8vw, 15px);
-    background: rgba(255, 99, 71, 0.7);
-    top: 20%;
-    right: 20%;
-    filter: blur(1px);
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
 }
 
 /* ===== OUR IMPACT SECTION ===== */
@@ -603,14 +541,9 @@ body {
         font-size: clamp(2.5rem, 5vw, 3.2rem);
     }
     
-    .profile-container {
-        width: clamp(250px, 22vw, 300px);
-        height: clamp(250px, 22vw, 300px);
-    }
-    
-    .profile-image {
-        width: clamp(280px, 25vw, 340px);
-        height: clamp(280px, 25vw, 340px);
+    .banner-right-image {
+        max-width: 100%;
+        width: 90%;
     }
     
     /* Business Spectrum - 2 columns with centered third card */
@@ -649,9 +582,8 @@ body {
 @media (min-width: 600px) and (max-width: 768px) {
     .banner-section {
         height: auto;
-        min-height: 450px;
+        min-height: 550px;
         margin: 0 10px;
-        background-image: url('asset/Our Line of Bsuinesses (3).png');
     }
     
     .banner-content {
@@ -660,22 +592,33 @@ body {
         text-align: center;
     }
     
+    .content-right {
+        order: 1;
+        margin-bottom: 30px;
+    }
+    
+    .content-left {
+        order: 2;
+    }
+    
+    .banner-right-image {
+        max-width: 100%;
+        width: 70%;
+    }
+    
+    .tagline-top {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+    
+    .brand-name {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
     .main-heading {
-        font-size: 2.5rem;
-        margin-bottom: 25px;
-    }
-    
-    .profile-container {
-        width: 280px;
-        height: 280px;
-        margin-top: 30px;
-    }
-    
-    .profile-image {
-        width: 310px;
-        height: 310px;
-        top: 26%;
-        left: 45%;
+        font-size: 2rem;
+        margin-bottom: 20px;
     }
     
     .spectrum-grid {
@@ -716,9 +659,8 @@ body {
 @media (max-width: 599px) {
     .banner-section {
         height: auto;
-        min-height: 450px;
+        min-height: 550px;
         margin: 0 10px;
-        background-image: url('asset/Our Line of Bsuinesses (3).png');
     }
     
     .banner-content {
@@ -727,24 +669,33 @@ body {
         text-align: center;
     }
     
+    .content-right {
+        order: 1;
+        margin-bottom: 30px;
+    }
+    
+    .content-left {
+        order: 2;
+    }
+    
+    .banner-right-image {
+        max-width: 100%;
+        width: 70%;
+    }
+    
+    .tagline-top {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+    
+    .brand-name {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    
     .main-heading {
-        font-size: 2.5rem;
-        margin-bottom: 25px;
-    }
-    
-    .profile-container {
-        width: 300px;
-        height: 300px;
-        margin-top: 30px;
-    }
-    
-    .profile-image {
-        position: absolute;
-        top: 53%;
-        left: 54%;
-        transform: translate(-50%, -50%);
-        width: 330px;
-        height: 330px;
+        font-size: 2rem;
+        margin-bottom: 20px;
     }
     
     .spectrum-grid {
@@ -796,33 +747,46 @@ body {
 /* Small Mobile (480px and below) */
 @media (max-width: 480px) {
     .banner-section {
-        min-height: 400px;
-        background-image: url('asset/Our Line of Bsuinesses (3).png');
-    }
-    
-    .main-heading {
-        font-size: 2rem;
+        min-height: 500px;
     }
     
     .banner-content {
         padding: 30px 20px;
     }
     
-    .profile-container {
-        width: 250px;
-        height: 250px;
+    .content-right {
+        order: 1;
+        margin-bottom: 25px;
     }
     
-    .profile-image {
-        width: 280px;
-        height: 280px;
-               left: 47%;
-        top: 22%;
+    .content-left {
+        order: 2;
+    }
+    
+    .banner-right-image {
+        max-width: 100%;
+        width: 70%;
+    }
+    
+    .tagline-top {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+    }
+    
+    .brand-name {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .main-heading {
+        font-size: 1.7rem;
+        margin-bottom: 18px;
     }
     
     .cta-button {
         padding: 10px 20px;
-        font-size: 12px;
+        font-size: 11px;
         gap: 10px;
     }
     
@@ -869,25 +833,47 @@ body {
 /* Very Small Mobile (320px and below) */
 @media (max-width: 320px) {
     .banner-section {
-        background-image: url('asset/Our Line of Bsuinesses (3).png');
-    }
-    
-    .main-heading {
-        font-size: 1.7rem;
+        min-height: 470px;
     }
     
     .banner-content {
         padding: 20px 15px;
     }
     
-    .profile-container {
-        width: 200px;
-        height: 200px;
+    .content-right {
+        order: 1;
+        margin-bottom: 20px;
     }
     
-    .profile-image {
-        width: 230px;
-        height: 230px;
+    .content-left {
+        order: 2;
+    }
+    
+    .banner-right-image {
+        max-width: 100%;
+        width: 70%;
+    }
+    
+    .tagline-top {
+        font-size: 7px;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+    
+    .brand-name {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+    
+    .main-heading {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 10px;
+        gap: 8px;
     }
     
     .spectrum-card,
