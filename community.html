@@ -8,107 +8,109 @@
     <link rel="stylesheet" href="communityStyle.css">
     <link rel="stylesheet" href="components/header.css">
     <link rel="stylesheet" href="components/footer.css">
-    <style>
-        /* Override CTA overlay to black */
-        .cta-overlay {
-            background: rgba(0, 0, 0, 0.6) !important;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-        }
-        
-        .cta-section {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .cta-button {
-            padding: 18px 48px;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            background: white;
-            color: #ff8c00;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-        }
-        
-        .slide-indicators {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 12px;
-            z-index: 3;
-        }
-        
-        .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .indicator.active {
-            background: white;
-            width: 30px;
-            border-radius: 6px;
-        }
-        
-        .cta-slideshow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        
-        .cta-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        
-        .cta-slide.active {
-            opacity: 1;
-        }
-        
-        .cta-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+<style>
+    /* Override CTA overlay to black */
+    .cta-overlay {
+        background: rgba(0, 0, 0, 0.6) !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 80px;  /* Reduced padding to move button lower */
+        z-index: 2;
+    }
+    
+    .cta-section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;  /* Added to prevent overflow from taller slideshow */
+    }
+    
+    .cta-button {
+        padding: 18px 48px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: white;
+        color: #ff8c00;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    .slide-indicators {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 12px;
+        z-index: 3;
+    }
+    
+    .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .indicator.active {
+        background: white;
+        width: 30px;
+        border-radius: 6px;
+    }
+    
+    .cta-slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 153%;  /* Changed from 100% to 153% */
+        z-index: 1;
+    }
+    
+    .cta-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    
+    .cta-slide.active {
+        opacity: 1;
+    }
+    
+    .cta-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
 </head>
 
 <body>
@@ -208,21 +210,21 @@
 
             <div class="community-gallery">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&h=300&fit=crop"
+                    <img src="asset/BackpackDistribution.JPG"
                         alt="Backpack Distribution Event">
                     <div class="gallery-overlay">
                         <h4>Backpack Distribution Event</h4>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&h=300&fit=crop"
+                    <img src="asset/AfterSchoolTuting.JPG"
                         alt="After-School Learning Session">
                     <div class="gallery-overlay">
                         <h4>After-School Learning Session</h4>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=300&fit=crop"
+                    <img src="asset/SupplyDistribution.JPG"
                         alt="Supply Distribution Drive">
                     <div class="gallery-overlay">
                         <h4>Supply Distribution Drive</h4>
@@ -272,6 +274,9 @@
             <div class="cta-slide">
                 <img src="asset/GetInvovled4.JPG" alt="Students with backpacks">
             </div>
+             <div class="cta-slide">
+                <img src="asset/GetInvovledPic4.JPG" alt="Students with backpacks">
+            </div>
         </div>
         
         <div class="cta-overlay">
@@ -283,6 +288,7 @@
             <span class="indicator" onclick="goToSlide(1)"></span>
             <span class="indicator" onclick="goToSlide(2)"></span>
             <span class="indicator" onclick="goToSlide(3)"></span>
+             <span class="indicator" onclick="goToSlide(4)"></span>
         </div>
     </section>
     
