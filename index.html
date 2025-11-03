@@ -8,6 +8,55 @@
     <link rel="stylesheet" href="components/footer.css">
     <link rel="stylesheet" href="index-main.css">
     <style>
+        .hero {
+    background-image: url('asset/Banner.jpg'); 
+  height: 70vh;
+  border-radius: 20px;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-content h3 {
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.hero-content p {
+  margin: 30px 0;
+}
+
+.cta-btn {
+  margin-top: 40px;
+  padding: 12px 30px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: white;
+  color: black;
+}
+
         /* Enhanced CTA Button Alignment */
         .cta-button {
             align-items: center;
@@ -49,23 +98,19 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <section class="banner-section">
-                <div class="banner-content">
-                    <div class="content-left">
-                        <div class="tagline-top">WHERE IDEAS BECOME ENTERPRISE</div>
-                        <div class="brand-name" style="color: white;">NARINDER</div>
-                        <h1 class="main-heading">Our Lines of Business</h1>
-                        <a href="#business-spectrum" class="cta-button">
-                            LET'S TALK ABOUT THEM
-                            <div class="arrow-circle">→</div>
-                        </a>
-                    </div>
-
-                    <div class="content-right">
-                        <img src="asset/RightContentImage.png" alt="Banner Right Section" class="banner-right-image">
-                    </div>
-                </div>
-            </section>
+           <section class="hero">
+  <div class="overlay">
+    <div class="hero-content">
+      <h1>Empowering Growth Across Industries</h1>
+      <h3>Media • Healthcare • Network Security • Education & Social Impact</h3>
+      <p>
+        At <strong>TDM Group</strong>, we innovate, secure, heal, and empower —
+        building a stronger future through technology, healthcare, and community development.
+      </p>
+      <button class="cta-btn" onclick="scrollToSpectrum()">LET'S TALK ABOUT THEM →</button>
+    </div>
+  </div>
+</section>
         </div>
 
         <!-- Our Impact Section -->
@@ -122,7 +167,7 @@
         <div class="spectrum-grid">
             <div class="spectrum-card">
                 <div class="card-image">
-                    <img src="asset/Td media Cyber Security.jpg" alt="TDM Memorials Technology" class="card-main-image">
+                    <img src="asset/TeamMarketing.jpeg" alt="TDM Memorials Technology" class="card-main-image">
                 </div>
                 <div class="card-content">
                     <div class="business-tag">Technology</div>
@@ -160,64 +205,15 @@
                 </div>
                 <div class="card-content">
                     <div class="business-tag healthcare">Healthcare</div>
-                    <h3>Novo Robtics</h3>
+                    <h3>Novo Robtic</h3>
                     <p>Comprehensive healthcare services providing world-class medical care, advanced treatment facilities, and compassionate patient support.</p>
                 </div>
             </div>
-
-            <div class="spectrum-card">
-                <div class="card-image">
-                    <img src="asset/Hospitality.jpg" alt="TDM Hospitality Services" class="card-main-image">
-                </div>
-                <div class="card-content">
-                    <div class="business-tag hospitality">Hospitality</div>
-                    <h3>TDM Hospitality</h3>
-                    <p>Coming Soon..</p>
-                </div>
+               
             </div>
         </div>
     </div>
 </section>
-
-        <!-- Founder Section -->
-    <section class="tdm-family-section">
-            <div class="family-banner-wrapper">
-                <div class="section-title">
-                    <h2>TDM FAMILY</h2>
-                </div>
-                <div class="slide-counter">
-                    <span class="current">1</span> / <span class="total">3</span>
-                </div>
-                
-                <div class="banner-nav prev" onclick="prevFamilySlide()"></div>
-                <div class="banner-nav next" onclick="nextFamilySlide()"></div>
-                
-                <div class="family-banner-container" id="familyBannerContainer">
-                    <!-- Clone of last slide -->
-                    <div class="family-banner-slide clone">
-                        <img src="asset/Image1.jpg" alt="TDM Family">
-                    </div>
-
-                    <!-- Original slides -->
-                    <div class="family-banner-slide active">
-                        <img src="asset/Image2.jpg" alt="TDM Family">
-                    </div>
-
-                    <div class="family-banner-slide">
-                        <img src="asset/Image3.jpg" alt="TDM Family">
-                    </div>
-
-                    <div class="family-banner-slide">
-                        <img src="asset/Image1.jpg" alt="TDM Family">
-                    </div>
-
-                    <!-- Clone of first slide -->
-                    <div class="family-banner-slide clone">
-                        <img src="asset/Image2.jpg" alt="TDM Family">
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Include Global Footer -->
@@ -228,6 +224,14 @@
     <script src="components/footer.js"></script>
     <script src="index-main.js"></script>
        <script>
+        // Scroll to Business Spectrum function
+        function scrollToSpectrum() {
+            const spectrumSection = document.getElementById('business-spectrum');
+            if (spectrumSection) {
+                spectrumSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             console.log('Loading components...');
             
