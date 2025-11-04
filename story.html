@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Telling</title>
+</head>
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+     
+
+
+
+  
+
+      
+
+        /* Section Header */
+
+        /* Zigzag Content Section */
+        .content-section {
+            padding: 40px 0;
+        }
+
+        .content-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 80px;
+            padding: 0 20px;
+        }
+
+        .content-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-image {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .content-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .content-text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content-text h3 {
+            font-size: 2.5rem;
+            color: #FF4E50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .content-text h4 {
+            font-size: 1.5rem;
+            color: #1E3A8A;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .content-text p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .content-text ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-text ul li {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .content-text ul li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #FF4E50;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* Color variations for different sections */
+        .content-row:nth-child(1) .content-text h3 {
+            color: #1E3A8A;
+        }
+
+        .content-row:nth-child(2) .content-text h3 {
+            color: #FF4E50;
+        }
+
+        .content-row:nth-child(3) .content-text h3 {
+            color: #10B981;
+        }
+
+        .content-row:nth-child(4) .content-text h3 {
+            color: #8B5CF6;
+        }
+
+        /* Vision & Mission Section */
+        .vision-mission {
+            background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+
+        .vision-mission .container {
+            max-width: 1000px;
+        }
+
+        .vision-mission h2 {
+            text-align: center;
+            font-size: 3rem;
+            color: #FF4E50;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .vm-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .vm-card h3 {
+            font-size: 2rem;
+            color: #1E3A8A;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .vm-card p, .vm-card ul li {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .vm-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .vm-card ul li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .vm-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10B981;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+    
+
+    
+    
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-row,
+            .content-row.reverse {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .vm-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2,
+            .vision-mission h2 {
+                font-size: 2rem;
+            }
+
+            .content-text h3 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Placeholder for images */
+        .placeholder-img {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .placeholder-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+</style>
+<body>
+      <section class="content-section container">
+        <!-- TDM Network Technology - Image Left -->
+        <div class="content-row">
+            <div class="content-image">
+                <div class="placeholder-img">
+                    <img src="asset/TechnologyImage.jpeg"/>
+                </div>
+            </div>
+            <div class="content-text">
+                <h3>TDM Network Technology</h3>
+                <p>Our system integration services include a variety of capabilities to meet diverse client needs across multiple sectors.</p>
+                
+                <h4>Comprehensive Services</h4>
+                <ul>
+                    <li>Enterprise Network Solutions</li>
+                    <li>Cloud Architecture & Management</li>
+                    <li>Software Development</li>
+                    <li>Cybersecurity Solutions</li>
+                    <li>Data Integration & Analytics</li>
+                </ul>
+                
+                <p style="margin-top: 20px; font-weight: 600; color: #1E3A8A;">
+                    Empowering businesses with secure, scalable, and intelligent technology frameworks that enable innovation, efficiency, and growth.
+                </p>
+            </div>
+        </div>
+
+        <!-- TD Media - Image Right -->
+        <div class="content-row reverse">
+            <div class="content-image">
+                <div class="placeholder-img">
+                    <img src="asset/EventPlanning.jpeg"/>
+                </div>
+            </div>
+            <div class="content-text">
+                <h3>TD Media</h3>
+                <p>We focus on delivering customized solutions that align with our clients' unique business objectives and challenges.</p>
+                
+                <h4>Tailored Solutions</h4>
+                <ul>
+                    <li>Brand Strategy & Content Creation</li>
+                    <li>Social Media Management</li>
+                    <li>Website & E-commerce Development</li>
+                    <li>SEO & Performance Marketing</li>
+                    <li>Paid Media & Analytics</li>
+                </ul>
+                
+                <p style="margin-top: 20px; font-weight: 600; color: #FF4E50;">
+                    Integrating creativity with technology to deliver impactful brand experiences that drive measurable results.
+                </p>
+            </div>
+        </div>
+
+        <!-- TDM Foundation - Image Left -->
+        <div class="content-row">
+            <div class="content-image">
+                <div class="placeholder-img">
+                    <img src="asset/TDM Foundation.jpg"/>
+                </div>
+            </div>
+            <div class="content-text">
+                <h3>TDM Foundation</h3>
+                <p>Our commitment to client success drives our approach, ensuring that we contribute positively to their growth and efficiency.</p>
+                
+                <h4>Client Success Focus</h4>
+                <ul>
+                    <li>Digital Skill Training for youth</li>
+                    <li>Educational Support Programs</li>
+                    <li>Technology Awareness Campaigns</li>
+                    <li>Community Empowerment Initiatives</li>
+                </ul>
+                
+                <p style="margin-top: 20px; font-weight: 600; color: #10B981;">
+                    Bridging the digital divide and nurturing the next generation of informed, capable, and connected citizens.
+                </p>
+            </div>
+        </div>
+
+        <!-- TDM Manthan - Image Right -->
+        <div class="content-row reverse">
+            <div class="content-image">
+                <div class="placeholder-img">
+                    <img src="asset/Podcasting.jpeg"/>
+                </div>
+            </div>
+            <div class="content-text">
+                <h3>TDM Manthan</h3>
+                <p>A podcast and knowledge series featuring interviews with elite and influential personalities from across India.</p>
+                
+                <h4>Intellectual Platform</h4>
+                <p>A space for dialogue, inspiration, and thought leadership, bringing forward voices that are shaping India's growth in business, technology, education, art, and social innovation.</p>
+                
+                <p style="margin-top: 20px; font-weight: 600; color: #8B5CF6;">
+                    Capturing stories of success, resilience, and ideas that define the India of tomorrow, inspiring audiences to think, reflect, and act.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

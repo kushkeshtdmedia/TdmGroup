@@ -113,49 +113,10 @@
 </section>
         </div>
 
-        <!-- Our Impact Section -->
-        <section class="impact-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Impact</h2>
-                    <p>Building a legacy of innovation and growth across diverse markets and industry</p>
-                </div>
-                <div class="impact-grid">
-                    <div class="impact-card">
-                        <div class="impact-icon">
-                            <div class="icon-svg">⚡</div>
-                        </div>
-                        <h3>Active Ventures</h3>
-                        <p>Currently operational companies across multiple industry verticals</p>
-                    </div>
+        
 
-                    <div class="impact-card">
-                        <div class="impact-icon">
-                            <div class="icon-svg">🔒</div>
-                        </div>
-                        <h3>Cyber Security</h3>
-                        <p>Advanced security solutions protecting digital infrastructure and data</p>
-                    </div>
-
-                    <div class="impact-card">
-                        <div class="impact-icon">
-                            <div class="icon-svg">🏭</div>
-                        </div>
-                        <h3>Industries</h3>
-                        <p>Diverse portfolio spanning technology, healthcare, hospitality and more</p>
-                    </div>
-
-                    <div class="impact-card">
-                        <div class="impact-icon">
-                            <div class="icon-svg">⭐</div>
-                        </div>
-                        <h3>15+ Years Experience</h3>
-                        <p>Proven track record of business development across 6+ industries</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- Include Story Section -->
+        <div id="story-placeholder"></div>
         <!-- Business Spectrum Section -->
 <section class="business-spectrum" id="business-spectrum">
     <div class="container">
@@ -171,7 +132,7 @@
                 </div>
                 <div class="card-content">
                     <div class="business-tag">Technology</div>
-                    <h3>TD Media</h3>
+                    <h3>TD Media Technology</h3>
                     <p>Leading cybersecurity and digital protection services with cutting-edge solutions for safeguarding data and securing lives.</p>
                 </div>
             </div>
@@ -205,7 +166,7 @@
                 </div>
                 <div class="card-content">
                     <div class="business-tag healthcare">Healthcare</div>
-                    <h3>Novo Robtic</h3>
+                    <h3>Novo Robotic</h3>
                     <p>Comprehensive healthcare services providing world-class medical care, advanced treatment facilities, and compassionate patient support.</p>
                 </div>
             </div>
@@ -259,7 +220,7 @@
                 .catch(error => {
                     console.error('Error loading header:', error);
                 });
-
+            
             // Load footer
             fetch('components/footer.html')
                 .then(response => {
@@ -283,6 +244,22 @@
                     console.error('Error loading footer:', error);
                 });
         });
+    </script>
+    <script> 
+           fetch('story.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Story not found: ' + response.status);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log('Story HTML loaded');
+                    document.getElementById('story-placeholder').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading story:', error);
+                });
     </script>
     <script>
        
