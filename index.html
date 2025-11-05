@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Narendra - Where Ideas Become Enterprise</title>
+    <title>TDM Groups</title>
     <link rel="stylesheet" href="components/header.css">
     <link rel="stylesheet" href="components/footer.css">
     <link rel="stylesheet" href="index-main.css">
@@ -29,15 +29,18 @@
 .hero-content h1 {
   font-size: 3rem;
   font-weight: 700;
+  font-family: 'Roboto', sans-serif;
 }
 
 .hero-content h3 {
   margin: 10px 0;
   font-weight: 400;
+  font-family: 'Roboto', sans-serif;
 }
 
 .hero-content p {
   margin: 30px 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .cta-btn {
@@ -49,12 +52,42 @@
   color: white;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .cta-btn:hover {
   background: white;
   color: black;
+  transform: translateY(-2px);
+}
+
+.cta-btn:hover .arrow-icon {
+  color: black;
+  transform: rotate(90deg);
+}
+
+/* Arrow Icon - Starts horizontal, rotates to vertical on hover */
+.arrow-icon {
+  font-size: 20px;
+  color: white;
+  transition: all 0.4s ease;
+  display: inline-block;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
 }
 
         /* Enhanced CTA Button Alignment */
@@ -102,12 +135,15 @@
   <div class="overlay">
     <div class="hero-content">
       <h1>Empowering Growth Across Industries</h1>
-      <h3>Media • Healthcare • Network Security • Education & Social Impact</h3>
+      <h3>Media • Network Security • Healthcare • Education & Social Impact </h3>
       <p>
         At <strong>TDM Group</strong>, we innovate, secure, heal, and empower —
-        building a stronger future through technology, healthcare, and community development.
+        building a stronger future through media, technology & security, healthcare and community development.
       </p>
-      <button class="cta-btn" onclick="scrollToSpectrum()">LET'S TALK ABOUT THEM →</button>
+      <button class="cta-btn" onclick="scrollToSpectrum()">
+        Explore
+        <span class="arrow-icon">→</span>
+      </button>
     </div>
   </div>
 </section>
@@ -128,18 +164,18 @@
         <div class="spectrum-grid">
             <div class="spectrum-card">
                 <div class="card-image">
-                    <img src="asset/TeamMarketing.jpeg" alt="TDM Memorials Technology" class="card-main-image">
+                    <img src="asset/TDM Networks.jpeg" alt="TDM Memorials Technology" class="card-main-image">
                 </div>
                 <div class="card-content">
                     <div class="business-tag">Technology</div>
-                    <h3>TD Media Technology</h3>
+                    <h3>TDM Network</h3>
                     <p>Leading cybersecurity and digital protection services with cutting-edge solutions for safeguarding data and securing lives.</p>
                 </div>
             </div>
 
             <div class="spectrum-card">
                 <div class="card-image">
-                    <img src="asset/Td media Marketing.jpg" alt="TN Media Marketing" class="card-main-image">
+                    <img src="asset/MediaMarketing2.jpeg" alt="TN Media Marketing" class="card-main-image">
                 </div>
                 <div class="card-content">
                     <div class="business-tag">Marketing</div>
@@ -162,7 +198,7 @@
          <div class="spectrum-grid-bottom">
             <div class="spectrum-card">
                 <div class="card-image">
-                    <img src="asset/Td health.jpg" alt="TDM Healthcare Services" class="card-main-image">
+                    <img src="asset/RoboticSurgery.jpg" alt="TDM Healthcare Services" class="card-main-image">
                 </div>
                 <div class="card-content">
                     <div class="business-tag healthcare">Healthcare</div>
@@ -185,11 +221,14 @@
     <script src="components/footer.js"></script>
     <script src="index-main.js"></script>
        <script>
-        // Scroll to Business Spectrum function
+        // Scroll to Business Spectrum function with smooth animation
         function scrollToSpectrum() {
             const spectrumSection = document.getElementById('business-spectrum');
             if (spectrumSection) {
-                spectrumSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                spectrumSection.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
             }
         }
 
