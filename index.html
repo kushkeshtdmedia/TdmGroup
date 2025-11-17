@@ -6,89 +6,90 @@
     <title>TDM Groups</title>
     <link rel="stylesheet" href="components/header.css">
     <link rel="stylesheet" href="components/footer.css">
+    <link rel="stylesheet" href="components/about-section.css">
     <link rel="stylesheet" href="index-main.css">
     <style>
         .hero {
-    background-image: url('asset/Banner.jpg'); 
-  height: 70vh;
-  border-radius: 20px;
-  position: relative;
-}
+            background-image: url('asset/Banner.jpg'); 
+            height: 70vh;
+            border-radius: 20px;
+            position: relative;
+        }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  border-radius: 20px;
-}
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            border-radius: 20px;
+        }
 
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+        }
 
-.hero-content h3 {
-  margin: 10px 0;
-  font-weight: 400;
-  font-family: 'Roboto', sans-serif;
-}
+        .hero-content h3 {
+            margin: 10px 0;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+        }
 
-.hero-content p {
-  margin: 30px 0;
-  font-family: 'Roboto', sans-serif;
-}
+        .hero-content p {
+            margin: 30px 0;
+            font-family: 'Roboto', sans-serif;
+        }
 
-.cta-btn {
-  margin-top: 40px;
-  padding: 12px 30px;
-  background: transparent;
-  border: 2px solid white;
-  border-radius: 30px;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Roboto', sans-serif;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
+        .cta-btn {
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Roboto', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.cta-btn:hover {
-  background: white;
-  color: black;
-  transform: translateY(-2px);
-}
+        .cta-btn:hover {
+            background: white;
+            color: black;
+            transform: translateY(-2px);
+        }
 
-.cta-btn:hover .arrow-icon {
-  color: black;
-  transform: rotate(90deg);
-}
+        .cta-btn:hover .arrow-icon {
+            color: black;
+            transform: rotate(90deg);
+        }
 
-/* Arrow Icon - Starts horizontal, rotates to vertical on hover */
-.arrow-icon {
-  font-size: 20px;
-  color: white;
-  transition: all 0.4s ease;
-  display: inline-block;
-}
+        /* Arrow Icon - Starts horizontal, rotates to vertical on hover */
+        .arrow-icon {
+            font-size: 20px;
+            color: white;
+            transition: all 0.4s ease;
+            display: inline-block;
+        }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-5px);
-  }
-  60% {
-    transform: translateY(-3px);
-  }
-}
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-5px);
+            }
+            60% {
+                transform: translateY(-3px);
+            }
+        }
 
         /* Enhanced CTA Button Alignment */
         .cta-button {
@@ -128,89 +129,88 @@
 <body>
     <!-- Include Global Header -->
     <div id="header-placeholder"></div>
+    
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-           <section class="hero">
-  <div class="overlay">
-    <div class="hero-content">
-      <h1>Empowering Growth Across Industries</h1>
-      <h3>Media • Network Security • Healthcare • Education & Social Impact </h3>
-      <p>
-        At <strong>TDM Group</strong>, we innovate, secure, heal, and empower —
-        building a stronger future through media, technology & security, healthcare and community development.
-      </p>
-      <button class="cta-btn" onclick="scrollToSpectrum()">
-        Explore
-        <span class="arrow-icon">→</span>
-      </button>
-    </div>
-  </div>
-</section>
+            <section class="hero">
+                <div class="overlay">
+                    <div class="hero-content">
+                        <h1>Empowering Growth Across Industries</h1>
+                        <h3>Media • Network Security • Healthcare • Education & Social Impact </h3>
+                        <p>
+                            At <strong>TDM Group</strong>, we innovate, secure, heal, and empower —
+                            building a stronger future through media, technology & security, healthcare ,community development & inspiring next next-generation.
+                        </p>
+                        <button class="cta-btn" onclick="scrollToSpectrum()">
+                            Explore
+                            <span class="arrow-icon">→</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        
+        <!-- Include About Section -->
+        <div id="about-section-placeholder"></div>
 
-        <!-- Include Story Section -->
-        <div id="story-placeholder"></div>
         <!-- Business Spectrum Section -->
-<section class="business-spectrum" id="business-spectrum">
-    <div class="container">
-        <div class="section-header">
-            <h2>Business Spectrum</h2>
-            <p>Explore our flagship companies that are leading innovation in their respective industries</p>
-        </div>
+        <section class="business-spectrum" id="business-spectrum">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Business Spectrum</h2>
+                    <p>Explore our flagship companies that are leading innovation in their respective industries</p>
+                </div>
 
-        <div class="spectrum-grid">
-            <div class="spectrum-card">
-                <div class="card-image">
-                    <img src="asset/TDM Networks.jpeg" alt="TDM Memorials Technology" class="card-main-image">
-                </div>
-                <div class="card-content">
-                    <div class="business-tag">Technology</div>
-                    <h3>TDM Network</h3>
-                    <p>Leading cybersecurity and digital protection services with cutting-edge solutions for safeguarding data and securing lives.</p>
-                </div>
-            </div>
+                <div class="spectrum-grid">
+                    <div class="spectrum-card">
+                        <div class="card-image">
+                            <img src="asset/TDM Networks.jpeg" alt="TDM Memorials Technology" class="card-main-image">
+                        </div>
+                        <div class="card-content">
+                            <div class="business-tag">Technology</div>
+                            <h3>TDM Network</h3>
+                            <p>Leading cybersecurity and digital protection services with cutting-edge solutions for safeguarding data and securing lives.</p>
+                        </div>
+                    </div>
 
-            <div class="spectrum-card">
-                <div class="card-image">
-                    <img src="asset/MediaMarketing2.jpeg" alt="TN Media Marketing" class="card-main-image">
-                </div>
-                <div class="card-content">
-                    <div class="business-tag">Marketing</div>
-                    <h3>TD Media</h3>
-                    <p>Leading marketing and brand growth services with cutting-edge digital solutions for engaging audiences and driving success</p>
-                </div>
-            </div>
+                    <div class="spectrum-card">
+                        <div class="card-image">
+                            <img src="asset/MediaMarketing2.jpeg" alt="TN Media Marketing" class="card-main-image">
+                        </div>
+                        <div class="card-content">
+                            <div class="business-tag">Marketing</div>
+                            <h3>TD Media</h3>
+                            <p>Leading marketing and brand growth services with cutting-edge digital solutions for engaging audiences and driving success</p>
+                        </div>
+                    </div>
 
-            <div class="spectrum-card">
-                <div class="card-image">
-                    <img src="asset/TDM Foundation.jpg" alt="TKJ Foundation" class="card-main-image">
+                    <div class="spectrum-card">
+                        <div class="card-image">
+                            <img src="asset/TDM Foundation.jpg" alt="TKJ Foundation" class="card-main-image">
+                        </div>
+                        <div class="card-content">
+                            <div class="business-tag">Foundation</div>
+                            <h3>TDM Foundation</h3>
+                            <p>Non-profit organization dedicated to community development, education initiatives, and social welfare programs.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <div class="business-tag">Foundation</div>
-                    <h3>TDM Foundation</h3>
-                    <p>Non-profit organization dedicated to community development, education initiatives, and social welfare programs.</p>
+                
+                <div class="spectrum-grid-bottom">
+                    <div class="spectrum-card">
+                        <div class="card-image">
+                            <img src="asset/RoboticSurgery.jpg" alt="TDM Healthcare Services" class="card-main-image">
+                        </div>
+                        <div class="card-content">
+                            <div class="business-tag healthcare">Healthcare</div>
+                            <h3>Novo Robotic</h3>
+                            <p>Comprehensive healthcare services providing world-class medical care, advanced treatment facilities, and compassionate patient support.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-         <div class="spectrum-grid-bottom">
-            <div class="spectrum-card">
-                <div class="card-image">
-                    <img src="asset/RoboticSurgery.jpg" alt="TDM Healthcare Services" class="card-main-image">
-                </div>
-                <div class="card-content">
-                    <div class="business-tag healthcare">Healthcare</div>
-                    <h3>Novo Robotic</h3>
-                    <p>Comprehensive healthcare services providing world-class medical care, advanced treatment facilities, and compassionate patient support.</p>
-                </div>
-            </div>
-               
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
 
     <!-- Include Global Footer -->
@@ -220,7 +220,8 @@
     <script src="components/header.js"></script>
     <script src="components/footer.js"></script>
     <script src="index-main.js"></script>
-       <script>
+    
+    <script>
         // Scroll to Business Spectrum function with smooth animation
         function scrollToSpectrum() {
             const spectrumSection = document.getElementById('business-spectrum');
@@ -260,6 +261,22 @@
                     console.error('Error loading header:', error);
                 });
             
+            // Load about section
+            fetch('components/about-section.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('About section not found: ' + response.status);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log('About section HTML loaded');
+                    document.getElementById('about-section-placeholder').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading about section:', error);
+                });
+            
             // Load footer
             fetch('components/footer.html')
                 .then(response => {
@@ -283,345 +300,6 @@
                     console.error('Error loading footer:', error);
                 });
         });
-    </script>
-    <script> 
-           fetch('story.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Story not found: ' + response.status);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    console.log('Story HTML loaded');
-                    document.getElementById('story-placeholder').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('Error loading story:', error);
-                });
-    </script>
-    <script>
-       
-       
-    class ImprovedCarousel {
-            constructor() {
-                this.currentSlide = 1; // Start at index 1 (first real slide)
-                this.totalSlides = 3;  // Only 3 real slides
-                this.slideInterval = 4000;
-                this.intervalId = null;
-                this.isTransitioning = false;
-                
-                this.carouselContainer = document.getElementById('carouselContainer');
-                this.slides = document.querySelectorAll('.carousel-slide');
-                
-                this.init();
-            }
-
-            init() {
-                // Set initial position to show first real slide (index 1)
-                this.carouselContainer.style.transform = `translateX(-20%)`;
-                this.updateActiveSlide();
-                this.updateSlideCounter();
-                this.startAutoSlide();
-                this.addTouchSupport();
-                
-                // Pause on hover
-                this.carouselContainer.addEventListener('mouseenter', () => this.pauseAutoSlide());
-                this.carouselContainer.addEventListener('mouseleave', () => this.startAutoSlide());
-            }
-
-            updateSlidePosition() {
-                if (this.isTransitioning) return;
-                
-                this.isTransitioning = true;
-                const translateX = -this.currentSlide * 20; // 20% per slide
-                this.carouselContainer.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                this.carouselContainer.style.transform = `translateX(${translateX}%)`;
-                
-                // Handle infinite loop
-                setTimeout(() => {
-                    if (this.currentSlide === 0) {
-                        // Jump to last real slide without animation
-                        this.currentSlide = this.totalSlides;
-                        this.carouselContainer.style.transition = 'none';
-                        this.carouselContainer.style.transform = `translateX(-${this.currentSlide * 20}%)`;
-                    } else if (this.currentSlide === this.totalSlides + 1) {
-                        // Jump to first real slide without animation
-                        this.currentSlide = 1;
-                        this.carouselContainer.style.transition = 'none';
-                        this.carouselContainer.style.transform = `translateX(-${this.currentSlide * 20}%)`;
-                    }
-                    
-                    this.updateActiveSlide();
-                    this.isTransitioning = false;
-                }, 800);
-            }
-
-            updateActiveSlide() {
-                this.slides.forEach((slide, index) => {
-                    const isActive = (this.currentSlide >= 1 && this.currentSlide <= 3) && 
-                                   (index === this.currentSlide);
-                    slide.classList.toggle('active', isActive);
-                });
-            }
-
-
-
-            updateSlideCounter() {
-                const slideCounter = document.getElementById('slideCounter');
-                if (slideCounter) {
-                    // Map current slide to display number (1->1, 2->2, 3->3)
-                    let displayNumber = this.currentSlide;
-                    if (this.currentSlide === 0) displayNumber = 3; // Last slide
-                    if (this.currentSlide === 4) displayNumber = 1; // First slide
-                    
-                    slideCounter.querySelector('.current').textContent = displayNumber;
-                }
-            }
-
-            nextSlide() {
-                this.currentSlide++;
-                this.updateSlidePosition();
-                this.updateSlideCounter();
-            }
-
-            prevSlide() {
-                this.currentSlide--;
-                this.updateSlidePosition();
-                this.updateSlideCounter();
-            }
-
-            goToSlide(slideIndex) {
-                if (this.isTransitioning) return;
-                
-                // Convert dot index to slide index (0->1, 1->2, 2->3)
-                this.currentSlide = slideIndex + 1;
-                this.updateSlidePosition();
-                this.updateSlideCounter();
-            }
-
-            startAutoSlide() {
-                this.pauseAutoSlide();
-                this.intervalId = setInterval(() => this.nextSlide(), this.slideInterval);
-            }
-
-            pauseAutoSlide() {
-                if (this.intervalId) {
-                    clearInterval(this.intervalId);
-                    this.intervalId = null;
-                }
-            }
-
-            addTouchSupport() {
-                let startX = 0;
-                let startY = 0;
-                let endX = 0;
-                let endY = 0;
-                const minSwipeDistance = 50;
-
-                this.carouselContainer.addEventListener('touchstart', (e) => {
-                    startX = e.touches[0].clientX;
-                    startY = e.touches[0].clientY;
-                    this.pauseAutoSlide();
-                }, { passive: true });
-
-                this.carouselContainer.addEventListener('touchmove', (e) => {
-                    endX = e.touches[0].clientX;
-                    endY = e.touches[0].clientY;
-                }, { passive: true });
-
-                this.carouselContainer.addEventListener('touchend', (e) => {
-                    const deltaX = startX - endX;
-                    const deltaY = Math.abs(startY - endY);
-                    
-                    if (Math.abs(deltaX) > minSwipeDistance && Math.abs(deltaX) > deltaY) {
-                        if (deltaX > 0) {
-                            this.nextSlide(); // Swipe left = next slide
-                        } else {
-                            this.prevSlide(); // Swipe right = previous slide
-                        }
-                    }
-                    
-                    this.startAutoSlide();
-                }, { passive: true });
-            }
-        }
-
-        // Global functions for onclick handlers
-        let carousel;
-
-        function nextSlide() {
-            carousel.nextSlide();
-        }
-
-        function prevSlide() {
-            carousel.prevSlide();
-        }
-
-        // Initialize carousel when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            carousel = new ImprovedCarousel();
-        });
-  
-
-    </script>
-     <script>
-        // TDM Family Banner Carousel
-        class FamilyBannerCarousel {
-            constructor() {
-                this.currentSlide = 1;
-                this.totalSlides = 3;
-                this.slideInterval = 4000;
-                this.intervalId = null;
-                this.isTransitioning = false;
-                
-                this.container = document.getElementById('familyBannerContainer');
-                this.slides = document.querySelectorAll('.family-banner-slide');
-                
-                if (this.container && this.slides.length > 0) {
-                    this.init();
-                } else {
-                    console.error('Family banner carousel elements not found');
-                }
-            }
-
-            init() {
-                // Set initial position
-                this.container.style.transform = 'translateX(-20%)';
-                this.updateActiveSlide();
-                this.updateCounter();
-                this.startAutoSlide();
-                this.addTouchSupport();
-                
-                // Pause on hover
-                this.container.addEventListener('mouseenter', () => this.pauseAutoSlide());
-                this.container.addEventListener('mouseleave', () => this.startAutoSlide());
-                
-                console.log('Family carousel initialized');
-            }
-
-            updateSlidePosition() {
-                if (this.isTransitioning) return;
-                
-                this.isTransitioning = true;
-                const translateX = -this.currentSlide * 20;
-                this.container.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                this.container.style.transform = `translateX(${translateX}%)`;
-                
-                setTimeout(() => {
-                    if (this.currentSlide === 0) {
-                        this.currentSlide = this.totalSlides;
-                        this.container.style.transition = 'none';
-                        this.container.style.transform = `translateX(-${this.currentSlide * 20}%)`;
-                    } else if (this.currentSlide === this.totalSlides + 1) {
-                        this.currentSlide = 1;
-                        this.container.style.transition = 'none';
-                        this.container.style.transform = `translateX(-${this.currentSlide * 20}%)`;
-                    }
-                    
-                    this.updateActiveSlide();
-                    this.isTransitioning = false;
-                }, 800);
-            }
-
-            updateActiveSlide() {
-                this.slides.forEach((slide, index) => {
-                    const isActive = (this.currentSlide >= 1 && this.currentSlide <= 3) && (index === this.currentSlide);
-                    slide.classList.toggle('active', isActive);
-                });
-            }
-
-            updateCounter() {
-                const counter = document.querySelector('.tdm-family-section .slide-counter');
-                if (counter) {
-                    let displayNumber = this.currentSlide;
-                    if (this.currentSlide === 0) displayNumber = 3;
-                    if (this.currentSlide === 4) displayNumber = 1;
-                    counter.querySelector('.current').textContent = displayNumber;
-                }
-            }
-
-            nextSlide() {
-                this.currentSlide++;
-                this.updateSlidePosition();
-                this.updateCounter();
-            }
-
-            prevSlide() {
-                this.currentSlide--;
-                this.updateSlidePosition();
-                this.updateCounter();
-            }
-
-            startAutoSlide() {
-                this.pauseAutoSlide();
-                this.intervalId = setInterval(() => this.nextSlide(), this.slideInterval);
-            }
-
-            pauseAutoSlide() {
-                if (this.intervalId) {
-                    clearInterval(this.intervalId);
-                    this.intervalId = null;
-                }
-            }
-
-            addTouchSupport() {
-                let startX = 0;
-                let endX = 0;
-                const minSwipe = 50;
-
-                this.container.addEventListener('touchstart', (e) => {
-                    startX = e.touches[0].clientX;
-                    this.pauseAutoSlide();
-                }, { passive: true });
-
-                this.container.addEventListener('touchmove', (e) => {
-                    endX = e.touches[0].clientX;
-                }, { passive: true });
-
-                this.container.addEventListener('touchend', () => {
-                    const deltaX = startX - endX;
-                    
-                    if (Math.abs(deltaX) > minSwipe) {
-                        if (deltaX > 0) {
-                            this.nextSlide();
-                        } else {
-                            this.prevSlide();
-                        }
-                    }
-                    this.startAutoSlide();
-                }, { passive: true });
-            }
-        }
-
-        // Global carousel instance
-        let familyCarousel = null;
-
-        // Global functions for navigation
-        function nextFamilySlide() {
-            if (familyCarousel) {
-                familyCarousel.nextSlide();
-            }
-        }
-
-        function prevFamilySlide() {
-            if (familyCarousel) {
-                familyCarousel.prevSlide();
-            }
-        }
-
-        // Initialize when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                setTimeout(() => {
-                    familyCarousel = new FamilyBannerCarousel();
-                }, 100);
-            });
-        } else {
-            setTimeout(() => {
-                familyCarousel = new FamilyBannerCarousel();
-            }, 100);
-        }
     </script>
 </body>
 </html>
