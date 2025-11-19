@@ -124,6 +124,38 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* 3D Z-Axis Effect for Cards */
+        body {
+            perspective: 1500px;
+        }
+
+        .business-spectrum {
+            transform-style: preserve-3d;
+        }
+
+        .spectrum-grid,
+        .spectrum-grid-bottom {
+            transform-style: preserve-3d;
+            perspective: 1500px;
+        }
+
+        .spectrum-card {
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        }
+
+        .spectrum-card:hover {
+            transform: translateZ(100px) translateY(-15px) scale(1.05) !important;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.4) !important;
+            z-index: 999 !important;
+        }
+
+        /* Override podcast tag color to match orange theme */
+        .business-tag.podcast {
+            background: linear-gradient(135deg, #FF8C00, #FFD700) !important;
+        }
     </style>
 </head>
 <body>
@@ -137,10 +169,10 @@
                 <div class="overlay">
                     <div class="hero-content">
                         <h1>Empowering Growth Across Industries</h1>
-                        <h3>Media • Technology • Healthcare • Community Development & Inspiring Next Generation
+                        <h3>Media • Technology • Healthcare • Community Development & Inspiring Next Generation
                         </p></h3>
                         <p>
-                            At <strong>TDM Group</strong>, we innovate, secure, heal and empower - building a stronger future through Media, Technology, Healthcare, Community Development & Inspiring Next Generation
+                            At <strong>TDM Group</strong>, we innovate, secure, heal and empower - building a stronger future through Media, Technology, Healthcare, Community Development & Inspiring Next Generation
                         </p>
                         <button class="cta-btn" onclick="scrollToSpectrum()">
                             Let's talk
@@ -155,15 +187,15 @@
         <div id="about-section-placeholder"></div>
 
         <!-- Business Spectrum Section -->
-        <section class="business-spectrum" id="business-spectrum">
+        <section class="business-spectrum" id="business-spectrum" style="transform-style: preserve-3d;">
             <div class="container">
                 <div class="section-header">
                     <h2>Business Spectrum</h2>
                     <p>Explore our flagship companies that are leading innovation in their respective industries</p>
                 </div>
 
-                <div class="spectrum-grid">
-                           <a href="https://tdmedianetwork.com/" target="_blank" rel="noopener noreferrer" class="spectrum-card">
+                <div class="spectrum-grid" style="transform-style: preserve-3d; perspective: 1500px;">
+                    <a href="https://tdmedianetwork.com/" target="_blank" rel="noopener noreferrer" class="spectrum-card" style="transform-style: preserve-3d; transform: translateZ(0); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.transform='translateZ(100px) translateY(-15px) scale(1.05)'; this.style.boxShadow='0 50px 100px rgba(0,0,0,0.4)'; this.style.zIndex='999';" onmouseout="this.style.transform='translateZ(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.2)'; this.style.zIndex='1';">
                         <div class="card-image">
                             <img src="asset/mediaBanner.png" alt="TN Media Marketing" class="card-main-image">
                         </div>
@@ -173,7 +205,7 @@
                             <p>Leading marketing and brand growth services with cutting-edge digital solutions for engaging audiences and driving success</p>
                         </div>
                     </a>
-                    <a href="https://tdmnetworks.net/" target="_blank" rel="noopener noreferrer" class="spectrum-card">
+                    <a href="https://tdmnetworks.net/" target="_blank" rel="noopener noreferrer" class="spectrum-card" style="transform-style: preserve-3d; transform: translateZ(0); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.transform='translateZ(100px) translateY(-15px) scale(1.05)'; this.style.boxShadow='0 50px 100px rgba(0,0,0,0.4)'; this.style.zIndex='999';" onmouseout="this.style.transform='translateZ(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.2)'; this.style.zIndex='1';">
                         <div class="card-image">
                             <img src="asset/TDM Networks.jpeg" alt="TDM Memorials Technology" class="card-main-image">
                         </div>
@@ -184,7 +216,7 @@
                         </div>
                     </a>
 
-                     <a href="https://novorobotic.com/" target="_blank" rel="noopener noreferrer" class="spectrum-card">
+                    <a href="https://novorobotic.com/" target="_blank" rel="noopener noreferrer" class="spectrum-card" style="transform-style: preserve-3d; transform: translateZ(0); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.transform='translateZ(100px) translateY(-15px) scale(1.05)'; this.style.boxShadow='0 50px 100px rgba(0,0,0,0.4)'; this.style.zIndex='999';" onmouseout="this.style.transform='translateZ(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.2)'; this.style.zIndex='1';">
                         <div class="card-image">
                             <img src="asset/novorobtic.png" alt="TDM Healthcare Services" class="card-main-image">
                         </div>
@@ -194,12 +226,10 @@
                             <p>Comprehensive healthcare services providing world-class medical care, advanced treatment facilities, and compassionate patient support.</p>
                         </div>
                     </a>              
-
-              
                 </div>
                 
-                <div class="spectrum-grid-bottom">
-                    <a href="https://tdmfoundation.org.in/" target="_blank" rel="noopener noreferrer" class="spectrum-card">
+                <div class="spectrum-grid-bottom" style="transform-style: preserve-3d; perspective: 1500px;">
+                    <a href="https://tdmfoundation.org.in/" target="_blank" rel="noopener noreferrer" class="spectrum-card" style="transform-style: preserve-3d; transform: translateZ(0); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.transform='translateZ(100px) translateY(-15px) scale(1.05)'; this.style.boxShadow='0 50px 100px rgba(0,0,0,0.4)'; this.style.zIndex='999';" onmouseout="this.style.transform='translateZ(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.2)'; this.style.zIndex='1';">
                         <div class="card-image">
                             <img src="asset/TDM_Banner (2).JPG" alt="TKJ Foundation" class="card-main-image">
                         </div>
@@ -210,7 +240,7 @@
                         </div>
                     </a>
 
-                    <a href="https://www.youtube.com/@TDManthan" target="_blank" rel="noopener noreferrer" class="spectrum-card">
+                    <a href="https://www.youtube.com/@TDManthan" target="_blank" rel="noopener noreferrer" class="spectrum-card" style="transform-style: preserve-3d; transform: translateZ(0); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);" onmouseover="this.style.transform='translateZ(100px) translateY(-15px) scale(1.05)'; this.style.boxShadow='0 50px 100px rgba(0,0,0,0.4)'; this.style.zIndex='999';" onmouseout="this.style.transform='translateZ(0)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.2)'; this.style.zIndex='1';">
                         <div class="card-image">
                             <img src="asset/podcastCard.png" alt="TDM Manthan Podcast" class="card-main-image">
                         </div>
